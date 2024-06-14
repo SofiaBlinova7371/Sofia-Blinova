@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #0A042C;
+    font-size: 62.5%;
+}
+
+/* FONTS & TEXT STYLES */
+
+@font-face {
+    font-family: "CormorantGaramond";
+    src: url("Fonts/CormorantGaramond-Regular.ttf");
+}
+
+@font-face {
+    font-family: "JosefinSans";
+    src: url("Fonts/JosefinSans-VariableFont_wght.ttf");
+}
+
+.menu_link, #copyright {
+    font-family: JosefinSans;
+    font-size: 2em;
+    color: #F3F3F3;
+    text-decoration: underline;
+    text-decoration-color: #0A042C;
+    text-decoration-skip-ink: 1em;
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+#link {
+    font-family: JosefinSans;
+    font-size: 2em;
+    font-weight: 300;
+    color: #F3F3F3;
+    text-decoration: underline;
+    text-decoration-color: #0A042C;
+    text-decoration-skip-ink: 1em;
+
+    cursor: pointer;
+}
+
+.menu_link:hover, #link:hover {
+    text-decoration-color: #F3F3F3;
+
+    transition: text-decoration-color 0.2s ease;
+}
+
+p, .school_link {
+    font-family: JosefinSans;
+    font-size: 2.2rem;
+    font-weight: 200;
+    line-height: 3rem;
+    color: #F3F3F3;
+}
+
+.school_link {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 8em;
+    align-items: center;
+    padding-left: 2vw;
+    padding-top: 2vw;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2vw;
+    padding: 15vh 2vw;
+}
+
+.info {
+    grid-column: 1 / span 4; 
+}
+
+.info p {
+    margin-bottom: 4vh;
+}
+
+#companies {
+    margin-bottom: 2vh;
+}
+
+.companies {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 6vh;
+}
+
+.company {
+    height: 6rem;
+    width: auto;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.company:hover {
+    transform: scale(1.05);
+}
+
+.aside {
+    grid-column: 8 / span 4;
+
+    height: fit-content;
+    background-color: #0A042C;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+#copyright {
+    margin-bottom: 1vh;
+}
+
+.icon {
+    margin-top: 1vh;
+    height: 4rem;
+    width: auto;
+    object-fit: cover;
+    margin-right: 0.5vw;
+    transition: 0.4s;
+}
+
+.icon:hover {
+    transform: scale(1.05);
+}
