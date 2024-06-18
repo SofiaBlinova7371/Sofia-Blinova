@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="home.css">
     <title>Home Page</title>
 </head>
@@ -15,15 +14,15 @@
             <a href="about_me.html" class="menu_link">about me</a>
         </div>
         <div class="header">
-            <h1>Graphic Design</h1>
-            <h1>Branding & Media</h1>
-            <h1>Photography</h1>
+            <div class="header_box"><h1>Graphic Design</h1></div>
+            <div class="header_box"><h1>Branding & Media</h1></div>
+            <div class="header_box"><h1>Photography</h1></div>
         </div>
     </div>
 
     <div class="cards">
         <div class="small_card">
-            <img class="card_image" src="Images/Solace/Card.JPG" alt="transparent pages flipping">
+            <a href="solace.html" class="a_img"><img class="card_image" src="Images/Solace/Card.JPG" alt="transparent pages flipping"></a>
             <a href="solace.html" class="title"><h2 class="title"><strong>Solace</strong> / Book Design</h2></a>
             <div class="features">
                 <p class="feature">Editorial Design</p>
@@ -31,7 +30,7 @@
             </div>
         </div>
         <div class="small_card">
-            <img class="card_image" src="Images/Emotions/Cover.png" alt="transparent pages flipping">
+            <a href="emotions.html" class="a_img"><img class="card_image" src="Images/Emotions/Cover.png" alt="transparent pages flipping"></a>
             <a href="emotions.html" class="title"><h2 class="title"><strong>Emotions</strong> / Interactive Website</h2></a>
             <div class="features">
                 <p class="feature">Coding</p>
@@ -39,7 +38,7 @@
             </div>
         </div>
         <div class="big_card">
-            <img class="card_image" src="Images/Urban Solitude/Cover.png" alt="transparent pages flipping">
+            <a href="solitude.html" class="a_img"><img class="card_image" src="Images/Urban Solitude/Cover.png" alt="transparent pages flipping"></a>
             <a href="solitude.html" class="title"><h2><strong>Urban Solitude</strong> / Social Campaign</h2></a>
             <div class="features">
                 <p class="feature">Poster Design</p>
@@ -48,7 +47,7 @@
             </div>
         </div>
         <div class="small_card">
-            <img class="card_image" src="Images/DOE/Card.png" alt="transparent pages flipping">
+            <a href="" class="a_img"><img class="card_image" src="Images/DOE/Card.png" alt="transparent pages flipping"></a>
             <a href="" class="title"><h2 class="title"><strong>DOE Buildings</strong> / Interactive Website</h2></a>
             <div class="features">
                 <p class="feature">Data Infographic</p>
@@ -56,7 +55,7 @@
             </div>
         </div>
         <div class="small_card">
-            <img class="card_image" src="Images/Moon/Card.png" alt="transparent pages flipping">
+            <a href="moon.html" class="a_img"><img class="card_image" src="Images/Moon/Card.png" alt="transparent pages flipping"></a>
             <a href="moon.html" class="title"><h2 class="title"><strong>The Moon</strong> / Book Design</h2></a>
             <div class="features">
                 <p class="feature">Editorial Design</p>
@@ -64,6 +63,11 @@
             </div>
         </div>
     </div>
+
+    <a href="works.html" class="button">
+        <span id="button">more works</span> 
+        <img id="arrow" src="Images/Logos/arrow.svg">
+    </a>
 
     <div class="footer">
         <a href="index.html" id="copyright">© 2024 Sofia Blinova</a>
@@ -74,5 +78,7 @@
             <a class="sm_icon" href="https://www.linkedin.com/in/sofia-blinova-965abb23a/"><img class="icon" src="Images/Footer/LinkedIn.svg" alt="LinkedIn icon"></a>
         </div>
     </div>
+
+    <script src="home_slideIn.js"></script>
 </body>
 </html>

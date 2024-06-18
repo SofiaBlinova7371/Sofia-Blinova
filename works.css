@@ -33,11 +33,6 @@ html {
     src: url("Fonts/JosefinSans-VariableFont_wght.ttf");
 }
 
-.header_box {
-    background-color: #0A042C;
-    overflow: hidden;
-}
-
 h1 {
     font-family: CormorantGaramond;
     font-weight: 100;
@@ -58,7 +53,18 @@ h2 strong {
     font-weight: 400;
 }
 
-.menu_link, #copyright {
+.menu_link {
+    font-family: JosefinSans;
+    font-size: 2em;
+    color: #0A042C;
+    text-decoration: underline;
+    text-decoration-color: #F3F3F3;
+    text-decoration-skip-ink: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#copyright {
     font-family: JosefinSans;
     font-size: 2em;
     color: #F3F3F3;
@@ -98,12 +104,6 @@ h2 strong {
     border-radius: 1.5em;
     border: 0.05em solid #0A042C;
     margin-bottom: 0.2em;
-}
-
-.home_block {
-    width: 100vw;
-    height: 95vh;
-    background-color: #0A042C;
 }
 
 .menu {
