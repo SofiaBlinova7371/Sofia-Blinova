@@ -53,7 +53,7 @@
     </div>
 
     <div class="concepts">
-        <img src="Images/Urban Solitude/1.png" alt="Poster deesign">
+        <img id="conceptImage" src="Images/Urban Solitude/1.png" alt="Poster design">
         <div class="concept_text">
             <h2>Design concept</h2>
             <p>
@@ -61,6 +61,25 @@
             </p>
         </div>
     </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const conceptImage = document.getElementById('conceptImage');
+        const imageUrls = [
+            'Images/Urban Solitude/1.png',
+            'Images/Urban Solitude/2.png',
+            'Images/Urban Solitude/3.png'
+        ];
+        let currentImageIndex = 0;
+
+        setInterval(() => {
+            currentImageIndex = (currentImageIndex + 1) % imageUrls.length;
+            conceptImage.src = imageUrls[currentImageIndex];
+        }, 3000);
+    });
+</script>
+
+    
 
     <div class="video">
         <h2>Promotioinal video</h2>

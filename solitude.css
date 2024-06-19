@@ -223,6 +223,20 @@ p, li {
     object-fit: cover;
 }
 
+#conceptImage {
+    grid-column: span 4;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
 .concept_text {
     grid-column: 6 / span 5;
 }
