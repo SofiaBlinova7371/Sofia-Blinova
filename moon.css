@@ -128,17 +128,56 @@ p, li {
     position: fixed;
     top: 0;
     z-index: -1;
+}
 
-    display: flex;
-    justify-content: center;
+.hero_image_container {
+    margin: 5vh auto;
+    width: 100%;
+    height: 70vh;
+    position: relative;
+}
+
+.hero_image,
+.hero_image_next {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
 }
 
 .hero_image {
-    margin: 5vh auto;
-    width: auto;
-    height: 70vh;
-    object-fit: cover;
-    z-index: -1;
+    opacity: 1;
+}
+
+.hero_image_next {
+    opacity: 0;
+}
+
+.image-navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.left-half,
+.right-half {
+    flex: 1;
+    cursor: pointer;
+}
+
+.left-half:hover {
+    cursor: url('Images/Logos/arrow_left.svg'), auto;
+}
+
+.right-half:hover {
+    cursor: url('Images/Logos/arrow_right.svg'), auto;
 }
 
 .menu {
