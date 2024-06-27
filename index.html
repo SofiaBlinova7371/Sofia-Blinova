@@ -10,8 +10,17 @@
     <div class="home_block">
         <div class="menu">
             <a id="logo_link" href="index.html"><img id="logo" src="Images/Logos/Logo.svg" alt="logo image"></a> 
-            <a href="works.html" class="menu_link">works</a>
-            <a href="about_me.html" class="menu_link">about me</a>
+            <div class="desktop-menu">
+                <a href="works.html" class="menu_link">works</a>
+                <a href="about_me.html" class="menu_link">about me</a>
+            </div>
+            <!-- Mobile menu toggle button -->
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <!-- Mobile menu links -->
+            <div class="menu-links" id="menuLinks">
+                <a href="works.html" class="menu_link">works</a>
+                <a href="about_me.html" class="menu_link">about me</a>
+            </div>
         </div>
         <div class="header">
             <div class="header_box"><h1>Graphic Design</h1></div>
@@ -80,5 +89,6 @@
     </div>
 
     <script src="home_slideIn.js"></script>
+    
 </body>
 </html>

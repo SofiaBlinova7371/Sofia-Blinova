@@ -9,8 +9,17 @@
 <body>
     <div class="menu">
         <a id="logo_link" href="index.html"><img id="logo" src="Images/Logos/Logo_dark.svg" alt="logo image"></a> 
-        <a href="works.html" class="menu_link">works</a>
-        <a href="about_me.html" class="menu_link">about me</a>
+        <div class="desktop-menu">
+            <a href="works.html" class="menu_link">works</a>
+            <a href="about_me.html" class="menu_link">about me</a>
+        </div>
+        <!-- Mobile menu toggle button -->
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <!-- Mobile menu links -->
+        <div class="menu-links" id="menuLinks">
+            <a href="works.html" class="menu_link">works</a>
+            <a href="about_me.html" class="menu_link">about me</a>
+        </div>
     </div>
 
     <div class="cards">

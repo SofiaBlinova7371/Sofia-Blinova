@@ -10,8 +10,17 @@
 <body>
     <div class="menu">
         <a id="logo_link" href="index.html"><img id="logo" src="Images/Logos/Logo.svg" alt="logo image"></a> 
-        <a href="works.html" class="menu_link">works</a>
-        <a href="about_me.html" class="menu_link">about me</a>
+        <div class="desktop-menu">
+            <a href="works.html" class="menu_link">works</a>
+            <a href="about_me.html" class="menu_link">about me</a>
+        </div>
+        <!-- Mobile menu toggle button -->
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <!-- Mobile menu links -->
+        <div class="menu-links" id="menuLinks">
+            <a href="works.html" class="menu_link">works</a>
+            <a href="about_me.html" class="menu_link">about me</a>
+        </div>
     </div>
 
     <div class="main">
@@ -22,7 +31,7 @@
             <p id="companies">Previously worked with:</p>
             <div class="companies">
                 <a href="https://www.digitas.com/en-us"><img class="company" alt="digitas logo" src="Images/Logos/Digitas.svg"></a>
-                <a href="https://www.flhgrp.com"><img class="company" alt="fox lifestyle hospitality group logo" src="Images/Logos/Fox.svg"></a>
+                <a href="https://www.flhgrp.com"><img class="company" alt="fox lifestyle hospitality group logo" src="Images/Logos/fox.svg"></a>
                 <a href="https://davisdi.org"><img class="company" alt="Davis Design Intereactive logo" src="Images/Logos/di.svg"></a>
                 <a href="https://creativemedia.ucdavis.edu"><img class="company" alt="ASUCD Creative Media logo" src="Images/Logos/ASUCD.svg"></a>
             </div>
@@ -40,6 +49,6 @@
         </div>
     </div>
 
-    
+    <script src="home_slideIn.js"></script>
 </body>
 </html>

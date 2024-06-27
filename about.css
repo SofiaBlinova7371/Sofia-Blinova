@@ -1,3 +1,5 @@
+/* RESET */
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +7,7 @@
 
 html {
     background-color: #0A042C;
-    font-size: 62.5%;
+    font-size: 62.5%; /* Sets base font size to 10px for easier rem calculations */
 }
 
 /* FONTS & TEXT STYLES */
@@ -20,7 +22,8 @@ html {
     src: url("Fonts/JosefinSans-VariableFont_wght.ttf");
 }
 
-.menu_link, #copyright {
+.menu_link,
+#copyright {
     font-family: JosefinSans;
     font-size: 2em;
     color: #F3F3F3;
@@ -28,7 +31,6 @@ html {
     text-decoration-color: #0A042C;
     text-decoration-skip-ink: 1em;
     text-transform: uppercase;
-
     cursor: pointer;
 }
 
@@ -40,17 +42,17 @@ html {
     text-decoration: underline;
     text-decoration-color: #0A042C;
     text-decoration-skip-ink: 1em;
-
     cursor: pointer;
 }
 
-.menu_link:hover, #link:hover {
+.menu_link:hover,
+#link:hover {
     text-decoration-color: #F3F3F3;
-
     transition: text-decoration-color 0.2s ease;
 }
 
-p, .school_link {
+p,
+.school_link {
     font-family: JosefinSans;
     font-size: 2.2rem;
     font-weight: 200;
@@ -63,9 +65,20 @@ p, .school_link {
     font-weight: 500;
 }
 
+/* LAYOUT & STRUCTURE */
+
+.menu-toggle,
+.menu-links {
+    display: none;
+}
+
+.desktop-menu {
+    display: flex;
+    gap: 5rem;
+}
+
 .menu {
     display: flex;
-    flex-direction: row;
     gap: 8em;
     align-items: center;
     padding-left: 2vw;
@@ -80,7 +93,7 @@ p, .school_link {
 }
 
 .info {
-    grid-column: 1 / span 4; 
+    grid-column: 1 / span 4;
 }
 
 .info p {
@@ -113,17 +126,21 @@ p, .school_link {
 
 .aside {
     grid-column: 8 / span 4;
-
     height: fit-content;
     background-color: #0A042C;
-
     display: flex;
     flex-direction: column;
     gap: 1vh;
+    padding: 5vh 2vw;
 }
 
-#copyright {
-    margin-bottom: 1vh;
+.footer {
+    height: fit-content;
+    padding: 5vh 2vw;
+    background-color: #0A042C;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
 }
 
 .icon {
@@ -137,4 +154,88 @@ p, .school_link {
 
 .icon:hover {
     transform: scale(1.05);
+}
+
+/* MOBILE ADAPTATION */
+
+@media only screen and (max-width: 600px) {
+    .menu {
+        justify-content: space-between;
+        padding: 5vw;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 2rem;
+        color: #F3F3F3;
+        z-index: 10;
+        transition: transform 0.3s ease-out;
+    }
+
+    .menu-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #0a042cbd;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        gap: 4vw;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        z-index: 5;
+    }
+
+    .menu-links.show {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .menu-links a {
+        font-size: 1.8em;
+        transition: color 0.2s ease;
+    }
+
+    h1 {
+        font-size: 5em;
+    }
+
+    h2 {
+        font-size: 2.4em;
+        margin-top: 1em;
+    }
+
+    .info p {
+        margin-bottom: 5rem;
+    }
+
+    #link,
+    #copyright {
+        font-size: 1.8em;
+    }
+
+    .main {
+        width: 96vw;
+        height: fit-content;
+        margin: 10vh auto 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    .aside {
+        padding: 5vh 2vw;
+    }
 }
