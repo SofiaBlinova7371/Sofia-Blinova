@@ -1,0 +1,336 @@
+/* GENERAL STYLES */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* FONTS & TEXT STYLES */
+
+@font-face {
+    font-family: "CormorantGaramond";
+    src: url("Fonts/CormorantGaramond-Regular.ttf");
+}
+
+@font-face {
+    font-family: "JosefinSans";
+    src: url("Fonts/JosefinSans-VariableFont_wght.ttf");
+}
+
+h1 {
+    font-family: CormorantGaramond;
+    font-weight: 100;
+    font-size: 8em;
+    color: #0A042C;
+    margin-bottom: 5vh;
+}
+
+h2 {
+    font-family: JosefinSans;
+    font-weight: 400;
+    font-size: 3rem;
+    color: #0A042C;
+    text-transform: none;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.menu_link, #copyright {
+    font-family: JosefinSans;
+    font-size: 2em;
+    color: #0A042C;
+    text-decoration: underline;
+    text-decoration-color: rgba(10, 4, 44, 0);
+    text-decoration-skip-ink: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#copyright {
+    color: #F3F3F3;
+}
+
+#link {
+    font-family: JosefinSans;
+    font-size: 2em;
+    color: #F3F3F3;
+    text-decoration: none;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.menu_link:hover, #link:hover {
+    text-decoration-color: #0A042C;
+    transition: text-decoration-color 0.2s ease;
+}
+
+#website_link {
+    font-family: JosefinSans;
+    font-size: 2em;
+    color: #0A042C;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-wrap: nowrap;
+}
+
+.button {
+    padding: 1.5rem 2rem; 
+    width: 15rem;
+    border-radius: 5rem;
+    border: solid 0.1rem #0A042C;
+    text-decoration: none;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin: 10vh 2vw;
+    background-color: none;
+    transition: width 0.4s;
+}
+
+.button:hover {
+    background-color: #0a042c17;
+    width: 18rem;
+}
+
+#arrow {
+    width: 3rem;
+    height: auto;
+    transform: translateX(-60%) scale(0);
+    transition: transform 0.3s;
+}
+
+.button:hover #arrow {
+    transform: translateX(0) scale(1);
+}
+
+p, li {
+    font-family: JosefinSans;
+    font-size: 2.2rem;
+    font-weight: 200;
+    line-height: 3rem;
+    color: #0A042C;
+    list-style-type: none;
+}
+
+
+/* HERO SECTION */
+
+.hero {
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+.hero_image {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+
+/* MENU SECTION */
+
+.menu {
+    display: flex;
+    gap: 8em;
+    align-items: center;
+    position: absolute;
+    top: 2vw;
+    left: 2vw;
+    z-index: 5;
+}
+
+.desktop-menu {
+    display: flex;
+    gap: 5rem;
+}
+
+/* PAGE CONTENT */
+
+.page {
+    width: 100%;
+    background-color: #F3F3F3;
+    margin-top: 80vh;
+    position: relative;
+    z-index: 1;
+}
+
+.main {
+    width: 96vw;
+    padding: 5vh 2vw;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2vw;
+}
+
+.info {
+    grid-column: 1 / span 5; 
+}
+
+.description {
+    margin-bottom: 2vh;
+}
+
+.scope {
+    margin-top: 5vh;
+    grid-column: 8 / span 2; 
+    display: inline-block;
+}
+
+.software {
+    margin-top: 5vh;
+    grid-column: 10 / span 2; 
+    display: inline-block;
+}
+
+.mockups {
+    width: 96vw;
+    padding: 0 2vw;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2vw;
+}
+
+#mobile {
+    grid-column: 1 / span 3; 
+    width: auto;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+#desktop {
+    grid-column: 4 / span 9; 
+    width: auto;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+/* FOOTER SECTION */
+
+.footer {
+    height: fit-content;
+    padding: 5vh 2vw;
+    background-color: #0A042C;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+#copyright {
+    margin-bottom: 1vh;
+}
+
+.icon {
+    margin-top: 1vh;
+    height: 4rem;
+    width: auto;
+    object-fit: cover;
+    margin-right: 0.5vw;
+    transition: 0.4s;
+}
+
+.icon:hover {
+    transform: scale(1.05);
+}
+
+/* MOBILE ADAPTATION */
+
+@media only screen and (max-width: 600px) {
+    .menu {
+        padding: 2vw;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+    
+    h1 {
+        font-size: 5em;
+    }
+
+    h2 {
+        font-size: 2.4em;
+    }
+
+    p, li {
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+    }
+
+    #link, #copyright {
+        font-size: 1.8em;
+    }
+
+    .hero_image {
+        height: 60vh;
+    }
+
+    .page {
+        margin-top: 60vh;
+    }
+
+    .main {
+        gap: 4vh;
+    }
+
+    .info {
+        grid-column: 1 / span 12; 
+    }
+    
+    .scope {
+        margin-top: 0;
+        grid-column: 1 / span 5; 
+    }
+    
+    .software {
+        margin-top: 0;
+        grid-column: 7 / span 5; 
+    }
+
+    .button, .button:hover {
+        margin: 5vh 2vw;
+        width: fit-content;
+    }
+
+    #arrow {
+        transform: none;
+    }
+
+    .mockups {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+    }
+    
+    #mobile {
+        width: auto;
+        max-height: 50vh;
+        object-fit: contain;
+    }
+    
+    #desktop {
+        width: 96vw;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .footer {
+        padding: 6vh 2vw;
+        gap: 1.5vh;
+    }
+
+    .icon {
+        height: 3.5rem;
+        margin-right: 1vw;
+    }
+}
