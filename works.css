@@ -261,6 +261,10 @@ h2 strong {
 /* MOBILE ADAPTATION */
 
 @media only screen and (max-width: 600px) {
+    .custom-cursor {
+        display: none; 
+    }
+
     .menu {
         justify-content: space-between;
         padding: 5vw;

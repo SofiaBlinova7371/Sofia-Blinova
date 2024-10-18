@@ -80,7 +80,6 @@ h2 strong {
 
 .title {
     text-decoration: none;
-    cursor: url("Images/Logos/arrow.svg"), auto;
 }
 
 .menu_link:hover {
@@ -314,6 +313,10 @@ h2 strong {
 /* MOBILE ADAPTATION */
 
 @media only screen and (max-width: 600px) {
+    .custom-cursor {
+        display: none; /* Hide custom cursor on mobile */
+    }
+
     .menu {
         justify-content: space-between;
         padding: 5vw;

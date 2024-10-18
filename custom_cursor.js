@@ -1,40 +1,36 @@
-// Get the custom cursor element
-const customCursor = document.querySelector('.custom-cursor');
+document.addEventListener('DOMContentLoaded', function () {
+    const customCursor = document.querySelector('.custom-cursor');
 
-// Function to update the position of the custom cursor
-function moveCursor(e) {
-    customCursor.style.left = `${e.clientX}px`;
-    customCursor.style.top = `${e.clientY}px`;
-}
+    // Check if it's a mobile device
+    const isMobile = window.innerWidth <= 600;
 
-// Function to show the custom cursor with smooth transition
-function showCursor() {
-    customCursor.classList.add('visible');
-}
+    if (isMobile) {
+        // If on mobile, do not show the custom cursor
+        return;
+    }
 
-// Function to hide the custom cursor with smooth transition
-function hideCursor() {
-    customCursor.classList.remove('visible');
-}
+    // Continue with the custom cursor functionality for desktop
+    document.addEventListener('mousemove', function (e) {
+        customCursor.style.left = `${e.clientX}px`;
+        customCursor.style.top = `${e.clientY}px`;
+    });
 
-// Function to scale down the cursor when clicked
-function clickCursor() {
-    customCursor.classList.add('clicked');
-}
+    document.addEventListener('mousedown', function () {
+        customCursor.classList.add('clicked');
+    });
 
-// Function to return the cursor to normal size when released
-function releaseCursor() {
-    customCursor.classList.remove('clicked');
-}
+    document.addEventListener('mouseup', function () {
+        customCursor.classList.remove('clicked');
+    });
 
-// Get all the elements that should have the custom cursor (e.g., .a_img elements)
-const hoverElements = document.querySelectorAll('.a_img');
+    // Make the cursor visible on hover over relevant elements
+    document.querySelectorAll('.a_img, .menu_link, #link').forEach(item => {
+        item.addEventListener('mouseenter', function () {
+            customCursor.classList.add('visible');
+        });
 
-// Add event listeners to each hoverable element
-hoverElements.forEach(element => {
-    element.addEventListener('mouseenter', showCursor);  // Show cursor on hover
-    element.addEventListener('mouseleave', hideCursor);  // Hide cursor when not hovering
-    element.addEventListener('mousemove', moveCursor);   // Move the cursor with the mouse
-    element.addEventListener('mousedown', clickCursor);  // Scale down cursor on click
-    element.addEventListener('mouseup', releaseCursor);  // Return cursor to normal size on release
+        item.addEventListener('mouseleave', function () {
+            customCursor.classList.remove('visible');
+        });
+    });
 });
