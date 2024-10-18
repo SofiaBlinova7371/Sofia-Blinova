@@ -13,11 +13,6 @@
             <img class="hero_image" src="Images/Emotions/1.png" alt="website screenshots">
             <img class="hero_image_next" src="Images/Emotions/2.png" alt="website screenshots">
         </div>
-        
-        <div class="image-navigation">
-            <div class="left-half"></div>
-            <div class="right-half"></div>
-        </div>
 
         <div class="menu">
             <a id="logo_link" href="index.html"><img id="logo" src="Images/Logos/Logo.svg" alt="logo image"></a> 
@@ -74,11 +69,9 @@
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const heroImage = document.querySelector('.hero_image');
             const heroImageNext = document.querySelector('.hero_image_next');
-            const leftHalf = document.querySelector('.left-half');
-            const rightHalf = document.querySelector('.right-half');
             const imageUrls = [
                 'Images/Emotions/1.png',
                 'Images/Emotions/2.png',
@@ -87,27 +80,19 @@
                 'Images/Emotions/5.png'
             ];
             let currentImageIndex = 0;
-    
-            function updateImage(index) {
-                currentImageIndex = index;
-                heroImageNext.src = imageUrls[currentImageIndex];
+
+            function updateImage() {
+                const nextIndex = (currentImageIndex + 1) % imageUrls.length;
+                heroImageNext.src = imageUrls[nextIndex];
                 heroImageNext.style.opacity = 1;
-    
+
                 setTimeout(() => {
-                    heroImage.src = imageUrls[currentImageIndex];
+                    heroImage.src = imageUrls[nextIndex];
                     heroImageNext.style.opacity = 0;
-                }, 1000);
+                    currentImageIndex = nextIndex;
+                }, 1000); 
             }
-    
-            leftHalf.addEventListener('click', () => {
-                currentImageIndex = (currentImageIndex - 1 + imageUrls.length) % imageUrls.length;
-                updateImage(currentImageIndex);
-            });
-    
-            rightHalf.addEventListener('click', () => {
-                currentImageIndex = (currentImageIndex + 1) % imageUrls.length;
-                updateImage(currentImageIndex);
-            });
+            setInterval(updateImage, 2500);
         });
     </script>
 </body>

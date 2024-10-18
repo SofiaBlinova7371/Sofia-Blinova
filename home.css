@@ -64,9 +64,8 @@ h2 strong {
     font-family: JosefinSans;
     font-size: 2em;
     color: #F3F3F3;
-    text-decoration: underline;
-    text-decoration-color: #0A042C;
     text-transform: uppercase;
+    text-decoration: none;
     cursor: pointer;
 }
 
@@ -85,8 +84,8 @@ h2 strong {
 }
 
 .menu_link:hover, #link:hover {
-    text-decoration-color: #F3F3F3;
-    transition: text-decoration-color 0.2s ease;
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
 }
 
 .feature {
@@ -99,6 +98,11 @@ h2 strong {
     border-radius: 1.5em;
     border: 0.05em solid #0A042C;
     margin-bottom: 0.2em;
+}
+
+.feature.light {
+    color: #F3F3F3;
+    border: 0.05em solid #F3F3F3;
 }
 
 /* HOME BLOCK SECTION */

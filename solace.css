@@ -52,10 +52,8 @@ p, li {
     font-family: JosefinSans;
     font-size: 2em;
     color: #0A042C;
-    text-decoration: underline;
-    text-decoration-color: #0a042c00;
-    text-decoration-skip-ink: 1em;
     text-transform: uppercase;
+    text-decoration: none;
     cursor: pointer;
 }
 
@@ -73,8 +71,8 @@ p, li {
 }
 
 .menu_link:hover, #link:hover {
-    text-decoration-color: #0A042C;
-    transition: text-decoration-color 0.2s ease;
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
 }
 
 #website_link {

@@ -12,10 +12,6 @@
             <img class="hero_image" src="Images/Moon/Spreads/1.png" alt="website screenshots">
             <img class="hero_image_next" src="Images/Moon/Spreads/2.png" alt="website screenshots">
         </div>
-        <div class="image-navigation">
-            <div class="left-half"></div>
-            <div class="right-half"></div>
-        </div>
         <div class="menu">
             <a id="logo_link" href="index.html"><img id="logo" src="Images/Logos/Logo_dark.svg" alt="logo image"></a>
             <div class="desktop-menu">
@@ -99,11 +95,9 @@
     </div>
     <script src="count.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const heroImage = document.querySelector('.hero_image');
             const heroImageNext = document.querySelector('.hero_image_next');
-            const leftHalf = document.querySelector('.left-half');
-            const rightHalf = document.querySelector('.right-half');
             const imageUrls = [
                 'Images/Moon/Spreads/1.png',
                 'Images/Moon/Spreads/2.png',
@@ -114,28 +108,24 @@
                 'Images/Moon/Spreads/7.png'
             ];
             let currentImageIndex = 0;
-
-            function updateImage(index) {
-                currentImageIndex = index;
-                heroImageNext.src = imageUrls[currentImageIndex];
+    
+            function updateImage() {
+                const nextIndex = (currentImageIndex + 1) % imageUrls.length;
+                heroImageNext.src = imageUrls[nextIndex];
                 heroImageNext.style.opacity = 1;
-
+    
+                // Swap images after the transition
                 setTimeout(() => {
-                    heroImage.src = imageUrls[currentImageIndex];
+                    heroImage.src = imageUrls[nextIndex];
                     heroImageNext.style.opacity = 0;
-                }, 1000);
+                    currentImageIndex = nextIndex;
+                }, 1000);  // Match this with CSS transition time
             }
-
-            leftHalf.addEventListener('click', () => {
-                currentImageIndex = (currentImageIndex - 1 + imageUrls.length) % imageUrls.length;
-                updateImage(currentImageIndex);
-            });
-
-            rightHalf.addEventListener('click', () => {
-                currentImageIndex = (currentImageIndex + 1) % imageUrls.length;
-                updateImage(currentImageIndex);
-            });
+    
+            // Automatically change images every 2.5 seconds
+            setInterval(updateImage, 2500);
         });
     </script>
+    
 </body>
 </html>
