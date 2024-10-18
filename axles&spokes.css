@@ -389,6 +389,10 @@ p, li {
         margin-bottom: 5vh;
     }
 
+    .website {
+        height: fit-content;
+    }
+
     .print_text, .website_text, .social_text {
         grid-column: 1 / span 11;
         
@@ -423,12 +427,6 @@ p, li {
         display: none;
     }
 
-    .website_video.mobile {
-        display: block;
-        grid-column: 1 / span 12;
-        margin-top: -10vh;
-    }
-
     #website_mobile {
         width: 100%;
         height: auto;
@@ -443,9 +441,10 @@ p, li {
         display: none;
     }
 
-    .social_video.mobile {
+    .social_video.mobile, .website_video.mobile {
         grid-column: 1 / span 12;
         display: block;
+        margin-top: 3vh;
     }
 
     .footer {
