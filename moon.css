@@ -68,7 +68,7 @@ p, li {
     font-weight: 300;
 }
 
-.menu_link:hover, #link:hover {
+.menu_link:hover {
     transform: scale(1.05);
     transition: 0.3s ease-in-out;
 }

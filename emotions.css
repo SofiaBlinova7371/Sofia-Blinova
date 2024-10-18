@@ -57,7 +57,7 @@ h2 {
     cursor: pointer;
 }
 
-.menu_link:hover, #link:hover {
+.menu_link:hover {
     text-decoration-color: #F3F3F3;
     transition: text-decoration-color 0.2s ease;
 }

@@ -83,7 +83,7 @@ h2 strong {
     cursor: url("Images/Logos/arrow.svg"), auto;
 }
 
-.menu_link:hover, #link:hover {
+.menu_link:hover {
     transform: scale(1.05);
     transition: 0.3s ease-in-out;
 }
@@ -149,7 +149,7 @@ h2 strong {
     animation: slide-up-fade-in 0.6s ease-out forwards;
 }
 
-/* CARDS SECTION */
+/* CARDS STYLING */
 
 .cards {
     width: 96vw;
@@ -161,7 +161,9 @@ h2 strong {
     row-gap: 10vw;
 }
 
-.small_card, .big_card {
+.small_card {
+    grid-column: span 1;
+    height: 60vh;
     position: relative;
     opacity: 0;
     transform: translateY(20px);
@@ -169,26 +171,25 @@ h2 strong {
     animation: none;
 }
 
-.small_card {
-    grid-column: span 1;
-    height: 60vh;
-}
-
 .big_card {
     grid-column: span 2;
     height: 80vh;
-}
-
-.animated {
-    animation: slide-up-fade-in 1s forwards;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    animation: none;
 }
 
 .a_img {
     display: block;
     width: 100%;
     height: 100%;
-    overflow: hidden; 
-    cursor: url("Images/Logos/arrow.svg"), auto;
+    overflow: hidden;
+}
+
+.animated {
+    animation: slide-up-fade-in 1s forwards;
 }
 
 .small_card .card_image,
@@ -197,6 +198,11 @@ h2 strong {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
+}
+
+.a_img:hover .card_image, 
+.a_img:hover .card_image {
+    transform: scale(1.05); 
 }
 
 .small_card:hover .card_image, 
@@ -210,11 +216,35 @@ h2 strong {
     left: 1vw;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
 }
 
 .small_card:hover .features, 
 .big_card:hover .features {
     opacity: 1;
+}
+
+
+/* CURSOR STYLING */
+
+.custom-cursor {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    pointer-events: none;
+    z-index: 1000;
+    transform: translate(-50%, -50%) scale(0.5); 
+    opacity: 0; 
+    transition: transform 0.3s ease, opacity 0.4s ease; 
+}
+
+.custom-cursor.visible {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); 
+}
+
+.custom-cursor.clicked {
+    transform: translate(-50%, -50%) scale(0.95);
 }
 
 /* BUTTONS */
