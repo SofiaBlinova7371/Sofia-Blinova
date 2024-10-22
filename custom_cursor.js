@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
         customCursor.classList.remove('clicked');
     });
 
-    // Make the cursor visible on hover over relevant elements
-    document.querySelectorAll('.a_img, .menu_link, #link').forEach(item => {
+    // Make the cursor visible on hover over relevant elements including left and right halves
+    document.querySelectorAll('.a_img, .menu_link, #link, .left-half, .right-half').forEach(item => {
         item.addEventListener('mouseenter', function () {
             customCursor.classList.add('visible');
         });

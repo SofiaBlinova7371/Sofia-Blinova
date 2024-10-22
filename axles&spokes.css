@@ -237,6 +237,68 @@ p, li {
     margin-bottom: 2rem;
 }
 
+/* SPREAD CONTAINER AND IMAGE STYLES */
+.spread {
+    grid-column: 1 / span 12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: auto;
+    margin-top: 5vh;
+}
+
+.spread img {
+    width: auto; 
+    height: 80vh;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.spread img.active {
+    opacity: 1;
+}
+
+.left-half, .right-half {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+}
+
+.left-half {
+    left: 0;
+}
+
+.right-half {
+    right: 0;
+}
+
+/* CURSOR STYLING */
+
+.custom-cursor {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    pointer-events: none;
+    z-index: 1000;
+    transform: translate(-50%, -50%) scale(0.5); 
+    opacity: 0; 
+    transition: transform 0.3s ease, opacity 0.4s ease; 
+}
+
+.custom-cursor.visible {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); 
+}
+
+.custom-cursor.clicked {
+    transform: translate(-50%, -50%) scale(0.95);
+}
+
+
+
 /* WEBSITE SECTION */
 
 .website {
@@ -421,6 +483,14 @@ p, li {
 
     .print_images {
          margin-bottom: 5vh;
+    }
+
+    .spread img {
+        width: 100vw;  /* 90% of the viewport width */
+        height: auto;  /* Maintain aspect ratio */
+        object-fit: contain;
+        opacity: 0;
+        transition: opacity 1s ease;
     }
 
     .website_video {
