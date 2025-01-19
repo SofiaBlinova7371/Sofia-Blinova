@@ -1,0 +1,66 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background and Logo Animation Container */
+body {
+    background-color: #000;
+    overflow: hidden;
+}
+
+.logo_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#left_line,
+#right_line {
+    background-color: #FBF4EC;
+    height: 1px;
+    width: 0; /* Start with no width */
+    transition: width 1s ease-in-out; /* Smooth line animation */
+}
+
+#left_line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+#right_line {
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+
+video {
+    width: 20vw;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease; /* Smooth fade-in */
+}
+
+/* Sliding Transition Effect */
+#slide-transition {
+    position: fixed;
+    top: 100%; /* Start off-screen */
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FBF4EC; /* Match your transition color */
+    z-index: 10000; /* Above everything */
+    transition: top 0.8s ease-in-out; /* Smooth slide-up */
+}
+
+#slide-transition.active {
+    top: 0; /* Slide up to cover the screen */
+}

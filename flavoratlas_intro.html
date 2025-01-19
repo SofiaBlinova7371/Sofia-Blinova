@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro Animation</title>
+    <link rel="stylesheet" href="flavoratlas_intro.css">
+</head>
+<body>
+    <!-- Logo Animation Container -->
+    <div class="logo_container">
+        <div id="left_line"></div>
+        <video src="Images/Flavor Atlas/Logo.mp4" muted></video>
+        <div id="right_line"></div>
+    </div>
+
+    <!-- Sliding Transition -->
+    <div id="slide-transition"></div>
+
+    <!-- JavaScript for Animation and Redirection -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const videoElement = document.querySelector('.logo_container video');
+            const leftLine = document.getElementById('left_line');
+            const rightLine = document.getElementById('right_line');
+            const slideTransition = document.getElementById('slide-transition');
+            const logoContainer = document.querySelector('.logo_container');
+
+            // Start line animation
+            setTimeout(() => {
+                leftLine.style.width = '40%';
+                rightLine.style.width = '40%';
+            }, 500); // Delay to start line movement
+
+            // Play the video after the lines finish
+            setTimeout(() => {
+                videoElement.style.opacity = '1';
+                videoElement.play();
+            }, 1500); // Wait for line animation
+
+            // Listen for the video to end
+            videoElement.addEventListener('ended', () => {
+                // Trigger slide-up transition
+                slideTransition.classList.add('active');
+                setTimeout(() => {
+                    window.location.href = "flavoratlas.html"; // Redirect to Flavor Atlas page
+                }, 500); // Wait for slide transition
+            });
+        });
+    </script>
+</body>
+</html>
