@@ -233,7 +233,7 @@ p, li {
     align-items: center;
 }
 
-#count {
+.count {
     margin-bottom: 2rem;
 }
 
@@ -404,10 +404,12 @@ p, li {
 
     h1 {
         font-size: 5em;
+        margin-bottom: 3vh;
     }
 
     h2 {
-        font-size: 2.4em;
+        font-size: 2em;
+        margin-top: 1em;
     }
 
     p, li {
@@ -417,6 +419,19 @@ p, li {
 
     #link, #copyright {
         font-size: 1.8em;
+    }
+
+    .button, .button:hover {
+        margin: 5vh 2vw;
+        width: fit-content;
+    }
+
+    #website_link {
+        font-size: 1.8rem;
+    }
+
+    #arrow {
+        transform: none;
     }
 
     .hero_image {
@@ -451,8 +466,9 @@ p, li {
         margin-bottom: 5vh;
     }
 
-    .website {
+    .print, .website {
         height: fit-content;
+        padding-bottom: 5vh;
     }
 
     .print_text, .website_text, .social_text {

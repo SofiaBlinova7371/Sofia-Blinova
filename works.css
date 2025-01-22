@@ -317,16 +317,17 @@ h2 strong {
     
     h1 {
         font-size: 5em;
+        margin-bottom: 3vh;
     }
 
     h2 {
-        font-size: 2.4em;
+        font-size: 2em;
         margin-top: 1em;
     }
 
-#link, #copyright {
-    font-size: 1.8em;
-}
+    #link, #copyright {
+        font-size: 1.8em;
+    }
 
     .feature {
         background-color: #f3f3f35f;

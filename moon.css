@@ -60,6 +60,7 @@ p, li {
 
 .menu_link {
     color: #0A042C;
+    text-decoration: none;
 }
 
 #link {
@@ -237,7 +238,7 @@ p, li {
     align-items: center;
 }
 
-#count {
+.count {
     margin-bottom: 2rem;
 }
 
