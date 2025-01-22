@@ -10,6 +10,11 @@ html {
     font-size: 62.5%; /* Sets base font size to 10px for easier rem calculations */
 }
 
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
 /* FONTS & TEXT STYLES */
 
 @font-face {
@@ -38,16 +43,10 @@ html {
     font-weight: 300;
     color: #F3F3F3;
     cursor: pointer;
+    text-decoration: none;
 }
 
-.menu_link:hover,
-#link:hover {
-    transform: scale(1.05);
-    transition: 0.3s ease-in-out;
-}
-
-p,
-.school_link {
+p {
     font-family: JosefinSans;
     text-decoration: none;
     font-size: 2.2rem;
@@ -56,8 +55,21 @@ p,
     color: #F3F3F3;
 }
 
-.school_link {
-    font-weight: 500;
+.key {
+    font-family: CormorantGaramond;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    color: #F3F3F3;
+}
+
+.note {
+    position: absolute;
+    left: 2vw;
+    bottom: 5vh;
+    font-size: 1.8rem;
+    color: #f3f3f344;
 }
 
 /* LAYOUT & STRUCTURE */
@@ -75,6 +87,7 @@ p,
 .menu {
     display: flex;
     gap: 8em;
+    height: 10vh;
     align-items: center;
     padding-left: 2vw;
     padding-top: 2vw;
@@ -83,12 +96,13 @@ p,
 .main {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    height: 90vh;
     gap: 2vw;
-    padding: 15vh 2vw;
+    padding: 10vh 2vw 5vh 2vw;
 }
 
 .info {
-    grid-column: 1 / span 4;
+    grid-column: 1 / span 5;
 }
 
 .info p {
@@ -120,13 +134,13 @@ p,
 }
 
 .aside {
-    grid-column: 8 / span 4;
+    grid-column: 9 / span 3;
     height: fit-content;
     background-color: #0A042C;
     display: flex;
     flex-direction: column;
     gap: 1vh;
-    padding: 5vh 2vw;
+    padding: 2vh 2vw;
 }
 
 .footer {
@@ -154,6 +168,10 @@ p,
 /* MOBILE ADAPTATION */
 
 @media only screen and (max-width: 600px) {
+    body {
+        height: fit-content;
+    }
+    
     .menu {
         justify-content: space-between;
         padding: 5vw;
@@ -213,7 +231,13 @@ p,
     }
 
     .info p {
+        font-size: 2rem;
         margin-bottom: 5rem;
+        line-height: 2.6rem;
+    }
+
+    .note {
+        display: none;
     }
 
     #link,
@@ -222,13 +246,21 @@ p,
     }
 
     .main {
-        width: 96vw;
+        width: 86vw;
         height: fit-content;
-        margin: 10vh auto 0;
+        margin: 10vh 3vw 0;
         padding: 0;
         display: flex;
         flex-direction: column;
         gap: 5vh;
+    }
+
+    .companies {
+        width: 86vw;
+    }
+
+    .company {
+        height: 5rem;
     }
 
     .aside {

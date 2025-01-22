@@ -42,11 +42,10 @@ h1 {
 
 h2 {
     font-family: JosefinSans;
-    font-weight: 200;
-    font-size: 3rem;
+    font-weight: 300;
+    font-size: 2.6rem;
     color: #0A042C;
-    text-transform: none;
-    margin-top: 1.5rem;
+    margin: 1.5rem 0 1rem 0;
 }
 
 h2 strong {
@@ -134,17 +133,17 @@ h2 strong {
 /* CARDS STYLING */
 
 .cards {
-    width: 96vw;
+    width: 92vw;
     height: fit-content;
     margin: 15vh auto 15vh;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     column-gap: 2vw;
     row-gap: 10vw;
 }
 
 .small_card {
-    grid-column: span 1;
+    grid-column: span 6;
     height: 60vh;
     position: relative;
     opacity: 0;
@@ -153,8 +152,18 @@ h2 strong {
     animation: none;
 }
 
+.tiny_card {
+    grid-column: span 4;
+    height: 35vh;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    animation: none;
+}
+
 .big_card {
-    grid-column: span 2;
+    grid-column: span 12;
     height: 80vh;
     position: relative;
     opacity: 0;
@@ -175,7 +184,7 @@ h2 strong {
 }
 
 .small_card .card_image,
-.big_card .card_image {
+.big_card .card_image, .tiny_card .card_image {
     width: 100%; 
     height: 100%;
     object-fit: cover;
@@ -188,7 +197,7 @@ h2 strong {
 }
 
 .small_card:hover .card_image, 
-.big_card:hover .card_image {
+.big_card:hover .card_image, .tiny_card .card_image {
     transform: scale(1.05); 
 }
 
@@ -202,7 +211,7 @@ h2 strong {
 }
 
 .small_card:hover .features, 
-.big_card:hover .features {
+.big_card:hover .features, .tiny_card:hover .features {
     opacity: 1;
 }
 
@@ -352,7 +361,7 @@ h2 strong {
         opacity: 1;
     }
 
-    .small_card, .big_card {
+    .small_card, .big_card, .tiny_card {
         width: 100%;
         height: auto;
     }

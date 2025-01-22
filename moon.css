@@ -32,7 +32,7 @@ h1 {
 h2 {
     font-family: JosefinSans;
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 2.2rem;
     color: #0A042C;
     margin: 1.5rem 0 1rem 0;
 }
@@ -44,6 +44,11 @@ p, li {
     line-height: 3rem;
     color: #0A042C;
     list-style-type: none;
+}
+
+.key {
+    font-family: CormorantGaramond;
+    font-weight: 600;
 }
 
 .menu_link, #copyright, #link, #website_link {

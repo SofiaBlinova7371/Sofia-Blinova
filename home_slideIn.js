@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const cards = document.querySelectorAll(".small_card, .big_card");
+    const cards = document.querySelectorAll(".small_card, .big_card, .tiny_card");
 
     const observer = new IntersectionObserver(
         (entries, observer) => {

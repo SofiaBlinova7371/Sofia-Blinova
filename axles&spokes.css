@@ -33,7 +33,7 @@ h1 {
 h2 {
     font-family: JosefinSans;
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 2.2rem;
     color: #0A042C;
     margin: 1.5rem 0 1rem 0;
 }
@@ -252,51 +252,8 @@ p, li {
     width: auto; 
     height: 80vh;
     object-fit: contain;
-    opacity: 0;
     transition: opacity 1s ease;
 }
-
-.spread img.active {
-    opacity: 1;
-}
-
-.left-half, .right-half {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 50%;
-}
-
-.left-half {
-    left: 0;
-}
-
-.right-half {
-    right: 0;
-}
-
-/* CURSOR STYLING */
-
-.custom-cursor {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    pointer-events: none;
-    z-index: 1000;
-    transform: translate(-50%, -50%) scale(0.5); 
-    opacity: 0; 
-    transition: transform 0.3s ease, opacity 0.4s ease; 
-}
-
-.custom-cursor.visible {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1); 
-}
-
-.custom-cursor.clicked {
-    transform: translate(-50%, -50%) scale(0.95);
-}
-
 
 
 /* WEBSITE SECTION */
