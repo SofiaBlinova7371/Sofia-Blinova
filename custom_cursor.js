@@ -1,11 +1,24 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const customCursor = document.querySelector('.custom-cursor');
+    // Load the custom cursor CSS dynamically
+    const cursorStylesheet = document.createElement('link');
+    cursorStylesheet.rel = 'stylesheet';
+    cursorStylesheet.href = 'custom_cursor.css'; // Path to your custom cursor CSS
+    document.head.appendChild(cursorStylesheet);
+
+    // Create the custom cursor element dynamically
+    const customCursor = document.createElement('div');
+    customCursor.classList.add('custom-cursor');
+    const cursorImage = document.createElement('img');
+    cursorImage.src = 'Images/Logos/click_mouse.svg'; // Path to your cursor image
+    cursorImage.alt = 'Custom cursor';
+    customCursor.appendChild(cursorImage);
+    document.body.appendChild(customCursor);
 
     // Check if it's a mobile device
     const isMobile = window.innerWidth <= 600;
 
     if (isMobile) {
-        // If on mobile, do not show the custom cursor
+        // If on mobile, do not enable custom cursor functionality
         return;
     }
 
@@ -23,8 +36,8 @@ document.addEventListener('DOMContentLoaded', function () {
         customCursor.classList.remove('clicked');
     });
 
-    // Make the cursor visible on hover over relevant elements including left and right halves
-    document.querySelectorAll('.a_img, .menu_link, #link, .left-half, .right-half').forEach(item => {
+    // Make the cursor visible on hover over relevant elements
+    document.querySelectorAll('.a_img, #website_link, .menu_link, .left-half, .right-half').forEach(item => {
         item.addEventListener('mouseenter', function () {
             customCursor.classList.add('visible');
         });

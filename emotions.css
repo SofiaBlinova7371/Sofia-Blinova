@@ -37,36 +37,28 @@ h2 {
     margin: 1.5rem 0 1rem 0;
 }
 
-.menu_link, #copyright {
+#link {
+    color: #F3F3F3;
+    font-weight: 300;
+}
+
+.menu_link, #website_link {
     font-family: JosefinSans;
     font-size: 2em;
-    color: #F3F3F3;
-    text-decoration: none;
     text-transform: uppercase;
     cursor: pointer;
-}
-
-#link {
-    font-family: JosefinSans;
-    font-size: 2em;
-    color: #F3F3F3;
+    pointer-events: auto;
     text-decoration: none;
-    font-weight: 300;
-    cursor: pointer;
+    text-wrap: nowrap;
 }
 
-.menu_link:hover {
-    text-decoration-color: #F3F3F3;
-    transition: text-decoration-color 0.2s ease;
+.menu_link {
+    color: #f3f3f3;
+    text-decoration: none;
 }
 
 #website_link {
-    font-family: JosefinSans;
-    font-size: 2em;
     color: #0A042C;
-    text-transform: uppercase;
-    text-decoration: none;
-    text-wrap: nowrap;
 }
 
 .button {
@@ -209,34 +201,6 @@ p, li {
     display: inline-block;
 }
 
-/* FOOTER SECTION */
-
-.footer {
-    height: fit-content;
-    padding: 5vh 2vw;
-    background-color: #0A042C;
-    display: flex;
-    flex-direction: column;
-    gap: 1vh;
-}
-
-#copyright {
-    margin-bottom: 1vh;
-}
-
-.icon {
-    margin-top: 1vh;
-    height: 4rem;
-    width: auto;
-    object-fit: cover;
-    margin-right: 0.5vw;
-    transition: 0.4s;
-}
-
-.icon:hover {
-    transform: scale(1.05);
-}
-
 /* MOBILE ADAPTATION */
 
 @media only screen and (max-width: 600px) {
@@ -249,9 +213,11 @@ p, li {
     }
     
     h1 {
-        font-size: 5em;
+        font-size: 4.2rem;
         margin-bottom: 3vh;
+        line-height: 4.6rem;
     }
+
 
     h2 {
         font-size: 2em;

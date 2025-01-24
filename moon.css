@@ -51,32 +51,19 @@ p, li {
     font-weight: 600;
 }
 
-.menu_link, #copyright, #link, #website_link {
+.menu_link, #website_link {
     font-family: JosefinSans;
     font-size: 2em;
     text-transform: uppercase;
     cursor: pointer;
-}
-
-#copyright {
-    color: #F3F3F3;
+    pointer-events: auto;
     text-decoration: none;
+    text-wrap: nowrap;
 }
 
 .menu_link {
     color: #0A042C;
     text-decoration: none;
-}
-
-#link {
-    color: #F3F3F3;
-    text-decoration: none;
-    font-weight: 300;
-}
-
-.menu_link:hover {
-    transform: scale(1.05);
-    transition: 0.3s ease-in-out;
 }
 
 #website_link {
@@ -267,27 +254,6 @@ p, li {
     object-fit: cover;
 }
 
-/* FOOTER */
-.footer {
-    padding: 5vh 2vw;
-    background-color: #0A042C;
-    display: flex;
-    flex-direction: column;
-    gap: 1vh;
-}
-
-.icon {
-    height: 4rem;
-    margin-top: 1vh;
-    margin-right: 0.5vw;
-    object-fit: cover;
-    transition: 0.4s;
-}
-
-.icon:hover {
-    transform: scale(1.05);
-}
-
 /* MOBILE STYLES */
 @media only screen and (max-width: 600px) {
     .menu {
@@ -299,8 +265,11 @@ p, li {
     }
 
     h1 {
-        font-size: 5em;
+        font-size: 4.2rem;
+        margin-bottom: 3vh;
+        line-height: 4.6rem;
     }
+
 
     h2 {
         font-size: 2.4em;
@@ -309,10 +278,6 @@ p, li {
     p, li {
         font-size: 1.8rem;
         line-height: 2.6rem;
-    }
-
-    #link, #copyright {
-        font-size: 1.8em;
     }
 
     .hero_image, .hero_image_next {
@@ -356,15 +321,5 @@ p, li {
 
     .numbers h1 {
         margin-bottom: 0;
-    }
-
-    .footer {
-        padding: 6vh 2vw;
-        gap: 1.5vh;
-    }
-
-    .icon {
-        height: 3.5rem;
-        margin-right: 1vw;
     }
 }

@@ -38,33 +38,28 @@ h2 {
     margin: 1.5rem 0 1rem 0;
 }
 
-.menu_link, #copyright {
-    font-family: JosefinSans;
-    font-size: 2em;
-    color: #F3F3F3;
-    text-transform: uppercase;
-    text-decoration: none;
-    cursor: pointer;
-}
-
 .dark {
     color: #0A042C;
 }
 
-#link {
+.menu_link, #website_link {
     font-family: JosefinSans;
     font-size: 2em;
-    color: #F3F3F3;
-    text-decoration: none;
-    font-weight: 300;
+    text-transform: uppercase;
     cursor: pointer;
+    pointer-events: auto;
+    text-decoration: none;
+    text-wrap: nowrap;
 }
 
-.menu_link:hover {
-    transform: scale(1.05);
-    transition: 0.3s ease-in-out;
+.menu_link {
+    color: #f3f3f3;
+    text-decoration: none;
 }
 
+#website_link {
+    color: #0A042C;
+}
 p, li {
     font-family: JosefinSans;
     font-size: 2.2rem;
@@ -216,7 +211,7 @@ p, li {
 
 .icon {
     margin-top: 1vh;
-    height: 4rem;
+    height: 2.6rem;
     width: auto;
     object-fit: cover;
     margin-right: 0.5vw;
@@ -266,9 +261,11 @@ p, li {
     }
 
     h1 {
-        font-size: 5em;
+        font-size: 4.2rem;
         margin-bottom: 3vh;
+        line-height: 4.6rem;
     }
+
 
     h2 {
         font-size: 2em;
@@ -337,15 +334,5 @@ p, li {
 
     .numbers h1 {
         margin: 0;
-    }
-
-    .footer {
-        padding: 6vh 2vw;
-        gap: 1.5vh;
-    }
-
-    .icon {
-        height: 3.5rem;
-        margin-right: 1vw;
     }
 }

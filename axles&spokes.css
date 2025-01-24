@@ -52,31 +52,19 @@ p, li {
     font-weight: 600;
 }
 
-.menu_link, #copyright, #link, #website_link {
+.menu_link, #website_link {
     font-family: JosefinSans;
     font-size: 2em;
     text-transform: uppercase;
     cursor: pointer;
+    pointer-events: auto;
     text-decoration: none;
-}
-
-#copyright {
-    color: #F3F3F3;
+    text-wrap: nowrap;
 }
 
 .menu_link {
-    color: #F3F3F3;
+    color: #f3f3f3;
     text-decoration: none;
-}
-
-#link {
-    color: #F3F3F3;
-    font-weight: 300;
-}
-
-.menu_link:hover, #link:hover {
-    transform: scale(1.05);
-    transition: 0.2s ease-in-out;
 }
 
 #website_link {
@@ -301,7 +289,6 @@ p, li {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 2vw;
-    margin-bottom: 10vh;
 }
 
 .social_text {
@@ -327,28 +314,6 @@ p, li {
 }
 
 
-
-/* FOOTER */
-.footer {
-    padding: 5vh 2vw;
-    background-color: #0A042C;
-    display: flex;
-    flex-direction: column;
-    gap: 1vh;
-}
-
-.icon {
-    height: 4rem;
-    margin-top: 1vh;
-    margin-right: 0.5vw;
-    object-fit: cover;
-    transition: 0.4s;
-}
-
-.icon:hover {
-    transform: scale(1.05);
-}
-
 /* MOBILE STYLES */
 @media only screen and (max-width: 600px) {
     .menu {
@@ -360,8 +325,9 @@ p, li {
     }
 
     h1 {
-        font-size: 5em;
+        font-size: 4.2rem;
         margin-bottom: 3vh;
+        line-height: 4.6rem;
     }
 
     h2 {
@@ -372,10 +338,6 @@ p, li {
     p, li {
         font-size: 1.8rem;
         line-height: 2.6rem;
-    }
-
-    #link, #copyright {
-        font-size: 1.8em;
     }
 
     .button, .button:hover {
@@ -488,15 +450,5 @@ p, li {
         grid-column: 1 / span 12;
         display: block;
         margin-top: 3vh;
-    }
-
-    .footer {
-        padding: 6vh 2vw;
-        gap: 1.5vh;
-    }
-
-    .icon {
-        height: 3.5rem;
-        margin-right: 1vw;
     }
 }

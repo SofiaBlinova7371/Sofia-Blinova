@@ -46,39 +46,23 @@ p, li {
     list-style-type: none;
 }
 
-.menu_link, #copyright {
+.menu_link, #website_link {
     font-family: JosefinSans;
     font-size: 2em;
-    color: #0A042C;
     text-transform: uppercase;
-    text-decoration: none;
     cursor: pointer;
-}
-
-#copyright {
-    color: #F3F3F3;
-}
-
-#link {
-    font-family: JosefinSans;
-    font-size: 2em;
-    color: #F3F3F3;
+    pointer-events: auto;
     text-decoration: none;
-    font-weight: 300;
-    cursor: pointer;
+    text-wrap: nowrap;
 }
 
-.menu_link:hover {
-    transform: scale(1.05);
-    transition: 0.3s ease-in-out;
+.menu_link {
+    color: #0A042C;
+    text-decoration: none;
 }
 
 #website_link {
-    font-family: JosefinSans;
-    font-size: 2em;
     color: #0A042C;
-    text-transform: uppercase;
-    text-decoration: none;
 }
 
 .button {
@@ -266,34 +250,6 @@ p, li {
     align-items: center;
 }
 
-/* FOOTER SECTION */
-
-.footer {
-    height: fit-content;
-    padding: 5vh 2vw;
-    background-color: #0A042C;
-    display: flex;
-    flex-direction: column;
-    gap: 1vh;
-}
-
-#copyright {
-    margin-bottom: 1vh;
-}
-
-.icon {
-    margin-top: 1vh;
-    height: 4rem;
-    width: auto;
-    object-fit: cover;
-    margin-right: 0.5vw;
-    transition: 0.4s;
-}
-
-.icon:hover {
-    transform: scale(1.05);
-}
-
 /* MOBILE ADAPTATION */
 
 @media only screen and (max-width: 600px) {
@@ -306,8 +262,9 @@ p, li {
     }
     
     h1 {
-        font-size: 5em;
+        font-size: 4.2rem;
         margin-bottom: 3vh;
+        line-height: 4.6rem;
     }
 
     h2 {
@@ -318,10 +275,6 @@ p, li {
     p, li {
         font-size: 1.8rem;
         line-height: 2.6rem;
-    }
-
-    #link, #copyright {
-        font-size: 1.8em;
     }
 
     .hero_image {
@@ -371,15 +324,5 @@ p, li {
 
     .numbers h1 {
         margin: 0;
-    }
-
-    .footer {
-        padding: 6vh 2vw;
-        gap: 1.5vh;
-    }
-
-    .icon {
-        height: 3.5rem;
-        margin-right: 1vw;
     }
 }

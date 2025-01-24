@@ -1,0 +1,57 @@
+/* FOOTER STYLING */
+
+.footer {
+    padding: 5vh 2vw;
+    background-color: #0A042C;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+#copyright {
+    font-family: JosefinSans;
+    font-size: 2em;
+    color: #F3F3F3;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#link {
+    font-family: JosefinSans;
+    font-size: 2em;
+    color: #F3F3F3;
+    text-decoration: none;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.icon {
+    height: 2.6rem;
+    width: auto;
+    margin-top: 1vh;
+    margin-right: 0.5vw;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.icon:hover {
+    transform: scale(1.05);
+}
+
+/* MOBILE ADAPTATION */
+@media only screen and (max-width: 600px) {
+    .footer {
+        padding: 6vh 2vw;
+        gap: 1.5vh;
+    }
+
+    #copyright, #link {
+        font-size: 1.8em;
+    }
+
+    .icon {
+        height: 2.4rem;
+        margin-right: 1vw;
+    }
+}
