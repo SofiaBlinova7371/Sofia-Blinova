@@ -236,11 +236,11 @@ p, li {
     margin-top: 5vh;
 }
 
-.spread img {
-    width: auto; 
-    height: 80vh;
-    object-fit: contain;
-    transition: opacity 1s ease;
+#spread-image {
+    width: 80%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
 
@@ -420,12 +420,8 @@ p, li {
          margin-bottom: 5vh;
     }
 
-    .spread img {
-        width: 100vw;  /* 90% of the viewport width */
-        height: auto;  /* Maintain aspect ratio */
-        object-fit: contain;
-        opacity: 0;
-        transition: opacity 1s ease;
+    #spread-image {
+        width: 100%;
     }
 
     .website_video {
