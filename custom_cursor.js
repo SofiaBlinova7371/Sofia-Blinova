@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Make the cursor visible on hover over relevant elements
-    document.querySelectorAll('.a_img, #website_link, .menu_link, .left-half, .right-half').forEach(item => {
+    document.querySelectorAll('.a_img, #website_link, .menu_link, .left-half, .right-half, .project_name, .section').forEach(item => {
         item.addEventListener('mouseenter', function () {
             customCursor.classList.add('visible');
         });

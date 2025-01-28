@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="photography.css">
+    <title>Works Page</title>
+</head>
+<body>
+    <div class="menu">
+        <a id="logo_link" href="index.html"><img id="logo" src="Images/Logos/Logo_dark.svg" alt="logo image"></a> 
+        <div class="desktop-menu">
+            <a href="design.html" class="menu_link">design</a>
+            <a href="photography.html" class="menu_link">photography</a>
+            <a href="about_me.html" class="menu_link">about me</a>
+        </div>
+        <!-- Mobile menu toggle button -->
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <!-- Mobile menu links -->
+        <div class="menu-links" id="menuLinks">
+            <a href="design.html" class="menu_link">design</a>
+            <a href="photography.html" class="menu_link">photography</a>
+            <a href="about_me.html" class="menu_link">about me</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="project_list">
+            <h2 class="section">Projects & Studio</h2>
+            <div class="list">
+                <a href="#" data-target="Axles" class="project_name"><h3 class="project_name">Axles & Spokes</h3></a>
+                <!-- <a href="#" data-target="Aqura" class="project_name"><h3 class="project_name">Aqura</h3></a> -->
+                <a href="#" data-target="Solitude" class="project_name"><h3 class="project_name">Urban Solitude</h3></a>
+            </div>
+            <h2 class="section">Street & Architecture</h2>
+            <div class="list">
+                <a href="#" data-target="Serbia" class="project_name"><h3 class="project_name">Soul of Serbia</h3></a>
+                <a href="#" data-target="They" class="project_name"><h3 class="project_name">They are looking</h3></a>
+            </div>
+        </div>
+        
+        <div class="photos">
+            <div id="Axles" class="project" data-section="Projects & Studio">
+                <a href="axles&spokes.html" class="project_name"><h2 class="project_name">Axles & Spokes</h2></a>
+                <div class="axles studio_grid">
+                    <img class="large" src="Photography/Projects & Studio/Axles & Spokes/1.png">
+                    <img class="medium" src="Photography/Projects & Studio/Axles & Spokes/2.jpg">
+                    <img class="small" src="Photography/Projects & Studio/Axles & Spokes/3.png">
+                    <img class="small" src="Photography/Projects & Studio/Axles & Spokes//4.jpg">
+                    <img class="large" src="Photography/Projects & Studio/Axles & Spokes/5.png">
+                    <img class="large" src="Photography/Projects & Studio/Axles & Spokes/6.jpg">
+                    <img class="small" src="Photography/Projects & Studio/Axles & Spokes/7.jpg">
+                </div>
+            </div>
+            <!-- <div id="Aqura" class="project" data-section="Projects & Studio">
+                <h2>Aqura</h2>
+                <div class="aqura studio_grid">
+                    <img class="aqura_small" src="Photography/Projects & Studio/Axles & Spokes/1.png">
+                    <img class="aqura_small" src="Photography/Projects & Studio/Axles & Spokes/2.jpg">
+                    <img class="aqura_big" src="Photography/Projects & Studio/Axles & Spokes/3.png">
+                </div>
+            </div> -->
+            <div id="Solitude" class="project" data-section="Projects & Studio">
+                <a href="solitude.html" class="project_name"><h2 class="project_name">Urban Solitude</h2></a>
+                <div class="solitude studio_grid">
+                    <img src="Photography/Projects & Studio/Urban Solitude/1.jpeg">
+                    <img src="Photography/Projects & Studio/Urban Solitude/2.jpeg">
+                    <img src="Photography/Projects & Studio/Urban Solitude/3.jpeg">
+                </div>
+            </div>
+            <div id="Serbia" class="project" data-section="Street & Architecture">
+                <h2>Soul of Serbia</h2>
+                <div class= "architecture_grid">
+                    <div class="column"> 
+                        <img src="Photography/Street & Architecture/Soul of Serbia/1.jpg">
+                        <img src="Photography/Street & Architecture/Soul of Serbia/2.jpg">
+                        <img src="Photography/Street & Architecture/Soul of Serbia/3.jpg">
+                        <img src="Photography/Street & Architecture/Soul of Serbia/4.jpg">
+                    </div>
+                    <div class="column">
+                        <img src="Photography/Street & Architecture/Soul of Serbia/5.jpg">
+                        <img src="Photography/Street & Architecture/Soul of Serbia/6.jpg">
+                        <img src="Photography/Street & Architecture/Soul of Serbia/7.jpg">
+                        <img src="Photography/Street & Architecture/Soul of Serbia/8.jpg">
+                    </div>
+                    <div class="column">
+                        <img src="Photography/Street & Architecture/Soul of Serbia/9.jpg">
+                        <img src="Photography/Street & Architecture/Soul of Serbia/10.jpg">
+                        <img src="Photography/Street & Architecture/Soul of Serbia/11.jpg">
+                    </div>
+                </div>
+            </div>
+            <div id="They" class="project" data-section="Street & Architecture">
+                <h2>They are looking</h2>
+                <div class="architecture_grid">
+                    <div class="column"> 
+                        <img src="Photography/Street & Architecture/The are looking/1.jpg">
+                        <img src="Photography/Street & Architecture/The are looking/2.jpg">
+                        <img src="Photography/Street & Architecture/The are looking/3.jpg">
+                    </div>
+                    <div class="column">
+                        <img src="Photography/Street & Architecture/The are looking/4.jpg">
+                        <img src="Photography/Street & Architecture/The are looking/5.jpg">
+                        <img src="Photography/Street & Architecture/The are looking/6.jpg">
+                    </div>
+                    <div class="column">
+                        <img src="Photography/Street & Architecture/The are looking/7.jpg">
+                        <img src="Photography/Street & Architecture/The are looking/8.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="photo_enlarge.js"></script>
+    <script src="photo_list_dropdown.js"></script>
+    <script src="photo_scroll.js"></script>
+    <!-- <script src="footerLoader.js"></script> -->
+    <script src="custom_cursor.js"></script>
+    <script src="home_slideIn.js"></script>
+</body>
+</html>

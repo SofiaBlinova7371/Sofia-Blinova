@@ -87,7 +87,6 @@ p {
 .menu {
     display: flex;
     gap: 8em;
-    height: 10vh;
     align-items: center;
     padding-left: 2vw;
     padding-top: 2vw;
