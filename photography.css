@@ -177,9 +177,17 @@ h3 {
     grid-column: 1 / span 3;
 }
 
-.aqura_big {
+.aqura_large {
     grid-column: 4 / span 6;
     grid-row: 1 / span 2;
+}
+
+.aqura_running {
+    grid-column: 1 / span 5;
+}
+
+.aqura_medium {
+    grid-column: 6 / span 4;
 }
 
 .solitude img {
