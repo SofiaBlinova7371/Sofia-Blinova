@@ -17,38 +17,40 @@ html {
 }
 
 @font-face {
-    font-family: "JosefinSans";
-    src: url("Fonts/JosefinSans-VariableFont_wght.ttf");
+    font-family: "PP Neue Montreal Book";
+    src: url("Fonts/PPNeueMontreal-Book.otf");
+}
+
+@font-face {
+    font-family: "PP Neue Montreal Italic";
+    src: url("Fonts/PPNeueMontreal-Italic.otf");
 }
 
 h1 {
     font-family: CormorantGaramond;
-    font-weight: 100;
+    font-weight: 500;
     font-size: 8em;
     color: #0A042C;
     margin-bottom: 5vh;
 }
 
 h2 {
-    font-family: JosefinSans;
-    font-weight: 400;
+    font-family: PP Neue Montreal Book;
     font-size: 2.2rem;
     color: #0A042C;
     margin: 1.5rem 0 1rem 0;
 }
 
 p, li {
-    font-family: JosefinSans;
-    font-size: 2.2rem;
-    font-weight: 200;
-    line-height: 3rem;
+    font-family: PP Neue Montreal Book;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
     color: #0A042C;
     list-style-type: none;
 }
 
 .key {
-    font-family: CormorantGaramond;
-    font-weight: 600;
+    font-family: PP Neue Montreal Italic;
 }
 
 #copyright {
@@ -61,7 +63,7 @@ p, li {
 }
 
 .menu_link, #website_link {
-    font-family: JosefinSans;
+    font-family: PP Neue Montreal Book;
     font-size: 2em;
     text-transform: uppercase;
     cursor: pointer;
@@ -176,27 +178,26 @@ p, li {
     height: fit-content;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     gap: 2vw;
 }
 
 .small_img {
     grid-column: span 3;
-    grid-row: span 1;
     width: 100%;
     height: 100%;
-    max-height: 31vh;
+    max-height: 33vh;
     object-fit: cover;
 }
 
-.big_img {
-    grid-column: 7 / span 6;
-    grid-row: 2 / span 2;
+.medium_img {
+    grid-column: span 6;
     width: 100%;
     height: 100%;
     max-height: 66vh;
     object-fit: cover;
 }
+
+
 
 /* NUMBERS SECTION */
 
@@ -239,15 +240,13 @@ p, li {
         line-height: 4.6rem;
     }
 
-
     h2 {
-        font-size: 2em;
-        margin-top: 1em;
+        font-size: 1.8em;
     }
 
     p, li {
-        font-size: 1.8rem;
-        line-height: 2.6rem;
+        font-size: 1.6rem;
+        line-height: 2rem;
     }
 
     .hero_image {
@@ -291,5 +290,15 @@ p, li {
 
     .numbers h1 {
         margin: 0;
+    }
+
+    .medium_img {
+        grid-column: span 12;
+        max-height: 85vh;
+    }
+
+    .small_img {
+        grid-column: span 6;
+        max-height: 66vh;
     }
 }

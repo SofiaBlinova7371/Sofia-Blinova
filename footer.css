@@ -9,8 +9,8 @@
 }
 
 #copyright {
-    font-family: JosefinSans;
-    font-size: 2em;
+    font-family: PP Neue Montreal Book;
+    font-size: 1.8em;
     color: #F3F3F3;
     text-transform: uppercase;
     text-decoration: none;
@@ -18,11 +18,10 @@
 }
 
 #link {
-    font-family: JosefinSans;
-    font-size: 2em;
+    font-family: PP Neue Montreal Book;
+    font-size: 1.8em;
     color: #F3F3F3;
     text-decoration: none;
-    font-weight: 300;
     cursor: pointer;
 }
 

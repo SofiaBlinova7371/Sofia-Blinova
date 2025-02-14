@@ -29,8 +29,13 @@ html {
 }
 
 @font-face {
-    font-family: "JosefinSans";
-    src: url("Fonts/JosefinSans-VariableFont_wght.ttf");
+    font-family: "PP Neue Montreal Thin";
+    src: url("Fonts/PPNeueMontreal-Thin.otf");
+}
+
+@font-face {
+    font-family: "PP Neue Montreal Book";
+    src: url("Fonts/PPNeueMontreal-Book.otf");
 }
 
 h1 {
@@ -41,19 +46,18 @@ h1 {
 }
 
 h2 {
-    font-family: JosefinSans;
-    font-weight: 300;
-    font-size: 2.6rem;
+    font-family: PP Neue Montreal Thin;
+    font-size: 2.2rem;
     color: #0A042C;
     margin: 1.5rem 0 1rem 0;
 }
 
 h2 strong {
-    font-weight: 400;
+    font-family: PP Neue Montreal Book;
 }
 
 .menu_link, #website_link {
-    font-family: JosefinSans;
+    font-family: PP Neue Montreal Book;
     font-size: 2em;
     text-transform: uppercase;
     cursor: pointer;
@@ -76,7 +80,7 @@ h2 strong {
 }
 
 .feature {
-    font-family: JosefinSans;
+    font-family: PP Neue Montreal Book;
     font-size: 1.5em;
     font-weight: 300;
     width: fit-content;

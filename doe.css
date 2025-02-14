@@ -17,34 +17,58 @@ html {
 }
 
 @font-face {
-    font-family: "JosefinSans";
-    src: url("Fonts/JosefinSans-VariableFont_wght.ttf");
+    font-family: "PP Neue Montreal Book";
+    src: url("Fonts/PPNeueMontreal-Book.otf");
+}
+
+@font-face {
+    font-family: "PP Neue Montreal Italic";
+    src: url("Fonts/PPNeueMontreal-Italic.otf");
 }
 
 h1 {
     font-family: CormorantGaramond;
-    font-weight: 100;
+    font-weight: 500;
     font-size: 8em;
     color: #0A042C;
     margin-bottom: 5vh;
 }
 
 h2 {
-    font-family: JosefinSans;
-    font-weight: 400;
+    font-family: PP Neue Montreal Book;
     font-size: 2.2rem;
     color: #0A042C;
     margin: 1.5rem 0 1rem 0;
 }
 
+p, li {
+    font-family: PP Neue Montreal Book;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: #0A042C;
+    list-style-type: none;
+}
+
+.key {
+    font-family: PP Neue Montreal Italic;
+}
+
+#copyright {
+    color: #F3F3F3;
+}
+
+#link {
+    color: #F3F3F3;
+    font-weight: 300;
+}
+
 .menu_link, #website_link {
-    font-family: JosefinSans;
+    font-family: PP Neue Montreal Book;
     font-size: 2em;
     text-transform: uppercase;
     cursor: pointer;
     pointer-events: auto;
     text-decoration: none;
-    text-wrap: nowrap;
 }
 
 .menu_link {
@@ -58,6 +82,7 @@ h2 {
 
 .button {
     padding: 1.5rem 2rem; 
+    text-wrap: nowrap;
     width: 15rem;
     border-radius: 5rem;
     border: solid 0.1rem #0A042C;
@@ -85,20 +110,6 @@ h2 {
 
 .button:hover #arrow {
     transform: translateX(0) scale(1);
-}
-
-p, li {
-    font-family: JosefinSans;
-    font-size: 2.2rem;
-    font-weight: 200;
-    line-height: 3rem;
-    color: #0A042C;
-    list-style-type: none;
-}
-
-.key {
-    font-family: CormorantGaramond;
-    font-weight: 600;
 }
 
 
@@ -215,15 +226,16 @@ p, li {
         line-height: 4.6rem;
     }
 
+
     h2 {
-        font-size: 2em;
-        margin-top: 1em;
+        font-size: 1.8em;
     }
 
     p, li {
-        font-size: 1.8rem;
-        line-height: 2.6rem;
+        font-size: 1.6rem;
+        line-height: 2rem;
     }
+
 
     .hero_image {
         height: 60vh;

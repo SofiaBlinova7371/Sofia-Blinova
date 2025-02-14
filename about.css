@@ -23,13 +23,18 @@ body {
 }
 
 @font-face {
-    font-family: "JosefinSans";
-    src: url("Fonts/JosefinSans-VariableFont_wght.ttf");
+    font-family: "PP Neue Montreal Book";
+    src: url("Fonts/PPNeueMontreal-Book.otf");
+}
+
+@font-face {
+    font-family: "PP Neue Montreal Italic";
+    src: url("Fonts/PPNeueMontreal-Italic.otf");
 }
 
 .menu_link,
 #copyright {
-    font-family: JosefinSans;
+    font-family: PP Neue Montreal Book;
     font-size: 2em;
     color: #F3F3F3;
     text-transform: uppercase;
@@ -38,7 +43,7 @@ body {
 }
 
 #link {
-    font-family: JosefinSans;
+    font-family: PP Neue Montreal Book;
     font-size: 2em;
     font-weight: 300;
     color: #F3F3F3;
@@ -47,20 +52,15 @@ body {
 }
 
 p {
-    font-family: JosefinSans;
-    text-decoration: none;
-    font-size: 2.2rem;
-    font-weight: 200;
-    line-height: 3rem;
+    font-family: PP Neue Montreal Book;
+    font-size: 2rem;
+    line-height: 2.4rem;
     color: #F3F3F3;
 }
 
 .key {
-    font-family: CormorantGaramond;
-    font-weight: 600;
+    font-family: PP Neue Montreal Italic;
     text-decoration: none;
-    font-size: 2.4rem;
-    line-height: 3rem;
     color: #F3F3F3;
 }
 
@@ -109,6 +109,7 @@ p {
 }
 
 #companies {
+    margin-top: 8vh;
     margin-bottom: 2vh;
 }
 
@@ -118,7 +119,7 @@ p {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 6vh;
+    margin-bottom: 8vh;
 }
 
 .company {
@@ -169,6 +170,7 @@ p {
 @media only screen and (max-width: 600px) {
     body {
         height: fit-content;
+        overflow-y: scroll;
     }
     
     .menu {
@@ -232,9 +234,9 @@ p {
     }
 
     .info p {
-        font-size: 2rem;
-        margin-bottom: 5rem;
-        line-height: 2.6rem;
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+        line-height: 2.2rem;
     }
 
     .note {
@@ -247,7 +249,7 @@ p {
     }
 
     .main {
-        width: 86vw;
+        width: 94vw;
         height: fit-content;
         margin: 10vh 3vw 0;
         padding: 0;
@@ -257,7 +259,7 @@ p {
     }
 
     .companies {
-        width: 86vw;
+        width: 94vw;
     }
 
     .company {
