@@ -156,13 +156,13 @@ h2 strong {
     height: fit-content;
     margin: 15vh auto 15vh;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     column-gap: 2vw;
-    row-gap: 10vw;
+    row-gap: 8vw;
 }
 
 .small_card {
-    grid-column: span 1;
+    grid-column: span 6;
     height: 60vh;
     position: relative;
     opacity: 0;
@@ -171,8 +171,18 @@ h2 strong {
     animation: none;
 }
 
+.tiny_card {
+    grid-column: span 4;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    animation: none;
+}
+
 .big_card {
-    grid-column: span 2;
+    grid-column: span 12;
     height: 80vh;
     position: relative;
     opacity: 0;
@@ -193,7 +203,7 @@ h2 strong {
 }
 
 .small_card .card_image,
-.big_card .card_image {
+.big_card .card_image, .tiny_card .card_image {
     width: 100%; 
     height: 100%;
     object-fit: cover;
@@ -206,7 +216,7 @@ h2 strong {
 }
 
 .small_card:hover .card_image, 
-.big_card:hover .card_image {
+.big_card:hover .card_image, .tiny_card .card_image {
     transform: scale(1.05); 
 }
 
@@ -220,9 +230,10 @@ h2 strong {
 }
 
 .small_card:hover .features, 
-.big_card:hover .features {
+.big_card:hover .features, .tiny_card:hover .features {
     opacity: 1;
 }
+
 
 
 /* BUTTONS */
@@ -358,9 +369,9 @@ h2 strong {
         opacity: 1;
     }
 
-    .small_card, .big_card {
+    .small_card, .big_card, .tiny_card {
         width: 100%;
-        height: auto;
+        height: 40vh;
     }
 
     #button {

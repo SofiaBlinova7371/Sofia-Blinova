@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="Princliples.css">
+    <title>Animation Principles</title>
+</head>
+<body>
+    <div class="hero">
+        <!-- <img class="hero_image" src="Images/DOE/Card.png" alt="website screenshots"> -->
+        <div class="hero_image">
+            <video id="animation" src="Images/Motion Graphics/Animation Principles/Header_desktop.mp4" autoplay loop muted playsinline></video>
+            <video id="animation_mobile" src="Images/Motion Graphics/Animation Principles/Header_mobile.mp4" autoplay loop muted playsinline></video>
+        </div>
+        
+        <div class="menu">
+            <a id="logo_link" href="index.html"><img id="logo" src="Images/Logos/Logo.svg" alt="logo image"></a> 
+            <div class="desktop-menu">
+                <a href="design.html" class="menu_link">design</a>
+                <a href="photography.html" class="menu_link">photography</a>
+                <a href="about_me.html" class="menu_link">about me</a>
+            </div>
+        </div>
+    </div>
+
+<div class="page"> 
+    <div class="main">
+        <div class="info">
+            <h1 class="title">
+                Animation Principles Series
+            </h1>
+            <p class="description">This series of six short conceptual animations is a visual homage to key Disney animation principles: <strong>Arc, Pose-to-Pose, Secondary Action, Staging, Squash and Stretch, and Exaggeration</strong>. Each segment is unified by a consistent aesthetic, exploring its own aspect of movement.</p>
+        </div>
+    
+        <div class="scope">
+            <h2>Scope:</h2>
+            <ul>
+                <li><p>Motion Graphic</p></li>
+                <li><p>Key-Frame Animation</p></li>
+                <li><p>3D Rendering</p></li>
+            </ul>
+        </div>
+    
+        <div class="software">
+            <h2>Software:</h2> 
+            <ul>
+                <li><p>Adobe After Effects</p></li>
+                <li><p>Adobe Illustrator</p></li>
+            </ul>
+        </div>
+    </div>  
+    
+    <div class="animation_cards">
+        <div class="card">
+            <img class="card_image" src="Images/Motion Graphics/Animation Principles/Arc.gif" alt="Arc animation principle">
+            <h2 class="title">Arc</h2>
+        </div>
+        <div class="card">
+            <img class="card_image" src="Images/Motion Graphics/Animation Principles/pose to pose.gif" alt="Pose-to-Pose animation principle">
+            <h2 class="title">Pose-to-Pose</h2>
+        </div>
+        <div class="card">
+            <img class="card_image" src="Images/Motion Graphics/Animation Principles/Secondary action.gif" alt="Secondary Action animation principle">
+            <h2 class="title">Secondary Action</h2>
+        </div>
+        <div class="card">
+            <img class="card_image" src="Images/Motion Graphics/Animation Principles/Exxageration.gif" alt="Exaggeration animation principle">
+            <h2 class="title">Exaggeration</h2>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        function handleSound(video) {
+            let observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        video.muted = false;  // Unmute when visible
+                        video.play();  // Ensure it plays
+                    } else {
+                        video.muted = true;   // Mute when not visible
+                    }
+                });
+            }, { threshold: 0.5 });  // Adjust visibility trigger (0.5 = 50% in view)
+    
+            observer.observe(video);
+        }
+    
+        const desktopVideo = document.getElementById("animation");
+        const mobileVideo = document.getElementById("animation_mobile");
+    
+        if (desktopVideo) handleSound(desktopVideo);
+        if (mobileVideo) handleSound(mobileVideo);
+    });
+    </script>
+    
+
+<script src="footerLoader.js"></script>
+<script src="custom_cursor.js"></script>
+</body>
+</html>

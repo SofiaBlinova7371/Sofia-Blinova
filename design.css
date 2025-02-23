@@ -124,13 +124,13 @@ h2 strong {
 /* CARDS STYLING */
 
 .cards {
-    width: 92vw;
+    width: 96vw;
     height: fit-content;
     margin: 15vh auto 15vh;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 2vw;
-    row-gap: 10vw;
+    row-gap: 8vw;
 }
 
 .small_card {
@@ -145,7 +145,7 @@ h2 strong {
 
 .tiny_card {
     grid-column: span 4;
-    height: 35vh;
+    aspect-ratio: 1 / 1;
     position: relative;
     opacity: 0;
     transform: translateY(20px);
@@ -286,7 +286,7 @@ h2 strong {
         margin: 10vh auto 15vh;
         display: flex;
         flex-direction: column;
-        gap: 5vh;
+        gap: 10vh;
     }
 
     .features {
@@ -297,6 +297,6 @@ h2 strong {
 
     .small_card, .big_card, .tiny_card {
         width: 100%;
-        height: auto;
+        height: 40vh;
     }
 }

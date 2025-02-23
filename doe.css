@@ -91,7 +91,7 @@ p, li {
     flex-direction: row;
     align-items: center;
     gap: 1rem;
-    margin: 10vh 2vw;
+    margin: 0vh 2vw 10vh;
     background-color: none;
     transition: width 0.4s;
 }
@@ -124,9 +124,27 @@ p, li {
 }
 
 .hero_image {
+    /* object-fit: cover; */
+    width: 96vw;
+    padding: 15vh 2vw;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2vw;
+}
+
+#mobile {
+    grid-column: 10 / span 3; 
+    width: auto;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+#desktop {
+    grid-column: 1 / span 9; 
     width: 100%;
-    height: 80vh;
-    object-fit: cover;
+    max-height: 70vh;
+    object-fit: contain;
 }
 
 
@@ -152,7 +170,7 @@ p, li {
 .page {
     width: 100%;
     background-color: #F3F3F3;
-    margin-top: 80vh;
+    margin-top: 90vh;
     position: relative;
     z-index: 1;
 }
@@ -186,29 +204,6 @@ p, li {
     display: inline-block;
 }
 
-.mockups {
-    width: 96vw;
-    padding: 0 2vw;
-    height: 70vh;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 2vw;
-}
-
-#mobile {
-    grid-column: 1 / span 3; 
-    width: auto;
-    max-height: 70vh;
-    object-fit: contain;
-}
-
-#desktop {
-    grid-column: 4 / span 9; 
-    width: auto;
-    max-height: 70vh;
-    object-fit: contain;
-}
-
 /* MOBILE ADAPTATION */
 
 @media only screen and (max-width: 600px) {
@@ -236,13 +231,15 @@ p, li {
         line-height: 2rem;
     }
 
-
     .hero_image {
-        height: 60vh;
+        padding-top: 10vh;
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
     }
 
     .page {
-        margin-top: 60vh;
+        margin-top: 90vh;
     }
 
     .main {
@@ -264,7 +261,7 @@ p, li {
     }
 
     .button, .button:hover {
-        margin: 5vh 2vw;
+        margin: 0 2vw 10vh;
         width: fit-content;
     }
 
@@ -275,17 +272,10 @@ p, li {
     #arrow {
         transform: none;
     }
-
-    .mockups {
-        height: fit-content;
-        display: flex;
-        flex-direction: column;
-        gap: 5vh;
-    }
     
     #mobile {
         width: auto;
-        max-height: 50vh;
+        max-height: 45vh;
         object-fit: contain;
     }
     
