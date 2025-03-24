@@ -1,0 +1,343 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%; 
+}
+
+/* FONTS & TEXT STYLES */
+
+@font-face {
+    font-family: "CormorantGaramond";
+    src: url("Fonts/CormorantGaramond-Regular.ttf");
+}
+
+@font-face {
+    font-family: "PP Neue Montreal Book";
+    src: url("Fonts/PPNeueMontreal-Book.otf");
+}
+
+@font-face {
+    font-family: "PP Neue Montreal Italic";
+    src: url("Fonts/PPNeueMontreal-Italic.otf");
+}
+
+h1 {
+    font-family: CormorantGaramond;
+    font-weight: 100;
+    font-size: 8em;
+    color: #0A042C;
+    margin-bottom: 5vh;
+}
+
+h2 {
+    font-family: PP Neue Montreal Book;
+    font-size: 2.2rem;
+    color: #0A042C;
+    margin: 1.5rem 0 1rem 0;
+}
+
+p, li {
+    font-family: PP Neue Montreal Book;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: #0A042C;
+    list-style-type: none;
+}
+
+.key {
+    font-family: PP Neue Montreal Italic;
+}
+
+.dark {
+    color: #0A042C;
+}
+
+.menu_link, #website_link {
+    font-family: PP Neue Montreal Book;
+    font-size: 2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    pointer-events: auto;
+    text-decoration: none;
+    text-wrap: nowrap;
+}
+
+.menu_link {
+    color: #f3f3f3;
+    text-decoration: none;
+}
+
+#website_link {
+    color: #0A042C;
+}
+
+/* LAYOUT & STRUCTURE */
+
+.hero {
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+.hero_image {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 8em;
+    align-items: center;
+    position: absolute;
+    top: 2vw;
+    left: 2vw;
+    z-index: 5;
+}
+
+.desktop-menu {
+    display: flex;
+    gap: 5rem;
+}
+
+.page {
+    width: 100%;
+    background-color: #F3F3F3;
+    margin-top: 90vh; 
+}
+
+.main {
+    width: 96vw;
+    padding: 5vh 2vw 15vh;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2vw;
+}
+
+.info {
+    grid-column: 1 / span 5; 
+}
+
+.description {
+    margin-bottom: 2vh;
+}
+
+.scope {
+    margin-top: 5vh;
+    grid-column: 8 / span 2; 
+    display: inline-block;
+}
+
+.software {
+    margin-top: 5vh;
+    grid-column: 10 / span 2; 
+    display: inline-block;
+}
+
+.motion {
+    width: 96vw;
+    padding: 0 2vw 10vh 2vw;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2vw;
+}
+
+.motion > img {
+    grid-column: span 6; 
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
+
+.motion_text {
+    grid-column: 8 / span 4; 
+}
+
+.motion_text > h2,
+.motion_text > p {
+    margin-bottom: 2vh;
+}
+
+.awards {
+    grid-column: span 4;
+    height: 20vh;
+    display: flex; 
+    gap: 2vw;
+}
+
+.awards > img {
+    height: 100%;
+    width: auto;
+    max-height: 20vh;
+    flex-grow: 1;
+    flex-shrink: 1;
+    object-fit: contain;
+}
+
+
+.concepts {
+    width: 96vw;
+    padding: 0 2vw 10vh 2vw;
+    height: fit-content;
+    overflow: scroll;
+}
+
+.concepts_img {
+    margin-top: 4vh;
+    height: 50vh;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.concepts_img > img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
+.footer {
+    height: fit-content;
+    padding: 5vh 2vw;
+    background-color: #0A042C;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.icon {
+    margin-top: 1vh;
+    height: 2.6rem;
+    width: auto;
+    object-fit: cover;
+    margin-right: 0.5vw;
+    transition: 0.4s;
+}
+
+.icon:hover {
+    transform: scale(1.05);
+}
+
+/* VIDEO SECTION */
+
+.video {
+    width: 96vw;
+    padding: 0 2vw 10vh 2vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* MOBILE ADAPTATION */
+
+@media only screen and (max-width: 600px) {
+    .menu {
+        padding: 2vw;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+
+    h1 {
+        font-size: 4.2rem;
+        margin-bottom: 3vh;
+        line-height: 4.6rem;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    p, li {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    #link,
+    #copyright {
+        font-size: 1.8em;
+    }
+
+    .hero_image {
+        width: 100%;
+        height: 60vh;
+        object-fit: cover;
+    }
+
+    .page {
+        margin-top: 60vh;
+    }
+
+    .main {
+        gap: 5vw;
+    }
+
+    .info {
+        grid-column: 1 / span 12;
+    }
+
+    .scope {
+        margin-top: 0;
+        grid-column: 1 / span 5; 
+    }
+
+    .concepts,
+    .motion {
+        display: flex;
+        flex-direction: column;
+        gap: 4vh;
+    }
+
+    .motion {
+        flex-direction: column-reverse;
+    }
+
+    .software {
+        margin-top: 0;
+        grid-column: 7 / span 5; 
+    }
+
+    .numbers {
+        margin-top: 5vw;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12%;
+    }
+
+    .numbers div {
+        width: 20vw;
+    }
+
+    .numbers h1 {
+        margin: 0;
+    }
+}
