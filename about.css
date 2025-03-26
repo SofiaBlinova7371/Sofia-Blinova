@@ -44,11 +44,15 @@ body {
 
 #link {
     font-family: PP Neue Montreal Book;
-    font-size: 2em;
-    font-weight: 300;
+    font-size: 1.8em;
     color: #F3F3F3;
-    cursor: pointer;
     text-decoration: none;
+    text-underline-offset: 0.1em;
+    cursor: pointer;
+}
+
+#link:hover{
+    text-decoration: underline #F3F3F3 1px ;
 }
 
 p {
@@ -150,19 +154,6 @@ p {
     display: flex;
     flex-direction: column;
     gap: 1vh;
-}
-
-.icon {
-    margin-top: 1vh;
-    height: 2.6rem;
-    width: auto;
-    object-fit: cover;
-    margin-right: 0.5vw;
-    transition: 0.4s;
-}
-
-.icon:hover {
-    transform: scale(1.05);
 }
 
 /* MOBILE ADAPTATION */

@@ -82,6 +82,7 @@ p, li {
 }
 
 
+
 /* HERO SECTION */
 
 .hero {
@@ -127,6 +128,7 @@ p, li {
 
 .page {
     width: 100%;
+    height: fit-content;
     background-color: #F3F3F3;
     margin-top: 85vh;
     position: relative;

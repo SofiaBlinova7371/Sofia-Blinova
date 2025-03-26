@@ -22,21 +22,14 @@
     font-size: 1.8em;
     color: #F3F3F3;
     text-decoration: none;
+    text-underline-offset: 0.1em;
     cursor: pointer;
 }
 
-.icon {
-    height: 2.6rem;
-    width: auto;
-    margin-top: 1vh;
-    margin-right: 0.5vw;
-    object-fit: cover;
-    transition: 0.4s;
+#link:hover{
+    text-decoration: underline #F3F3F3 1px ;
 }
 
-.icon:hover {
-    transform: scale(1.05);
-}
 
 /* MOBILE ADAPTATION */
 @media only screen and (max-width: 600px) {
