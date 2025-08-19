@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    width: 100vw;
+    width: 100dvw;
     background-color: #000;
     cursor: none;
 }
@@ -511,7 +511,7 @@ h2 {
 /* SECTIONS */
 
 .section {
-    margin: 0 1rem;
+    margin: 0 2rem;
     row-gap: 4rem;
 }
 
@@ -538,7 +538,7 @@ h2 {
     display: flex;
     align-items: center;
     margin: 3rem 1rem 6rem 1rem;
-    width: calc(100vw - 2rem);
+    width: calc(100vw - 4rem);
 }
 
 .menu {
@@ -548,6 +548,29 @@ h2 {
 
 .menu_about {
     margin-top: 4rem;
+}
+
+.hero_block {
+    grid-column: 2 / span 10;
+}
+
+.circles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2; /* Always above images */
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 2rem;
+}
+
+.circle {
+    background-color: #FEFEFE;
+    opacity: 0.7;
+    border-radius: 100%;
+    width: 6rem;
+    aspect-ratio: 1 / 1;
+    height: auto;
 }
 
 /* SECTIONS LAYOUT */
@@ -607,3 +630,4 @@ h1, h2 {
 }
 
 }
+

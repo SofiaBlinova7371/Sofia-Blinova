@@ -1,21 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const circles = document.querySelectorAll(".circles .circle");
   const previews = document.querySelectorAll(".hero_preview");
+  const circles = document.querySelectorAll(".circle");
 
   function showPreview(index) {
-    previews.forEach((img, i) => {
-      img.classList.toggle("visible", i === index);
+    previews.forEach((preview, i) => {
+      preview.classList.toggle("visible", i === index);
     });
   }
 
-  // Start with the first image
-  let currentIndex = 0;
-  showPreview(currentIndex);
+  // Show the first image by default
+  showPreview(0);
 
   circles.forEach((circle, index) => {
-    circle.addEventListener("mouseenter", () => {
-      currentIndex = index;
-      showPreview(index);
-    });
+    const isMobile = window.innerWidth <= 800;
+
+    if (isMobile) {
+      circle.addEventListener("click", () => {
+        showPreview(index);
+      });
+    } else {
+      circle.addEventListener("mouseenter", () => {
+        showPreview(index);
+      });
+    }
   });
 });
