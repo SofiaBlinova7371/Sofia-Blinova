@@ -114,7 +114,7 @@ ul {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto auto;
-    row-gap: 1rem;
+    row-gap: 2rem;
     column-gap: 2rem;
     margin: 0;
 }
@@ -169,15 +169,10 @@ ul {
 }
 
 .hero_quote {
-    grid-column: 2 / span 11;
+    grid-column: 3 / span 8;
     grid-row: 2;
     color: #FEFEFE;
     text-align: left;
-    margin-bottom: 4rem;
-}
-
-.hero_quote h4 {
-    font-size: 1.4rem;
 }
 
 /* SECTIONS */
@@ -583,6 +578,18 @@ h2 {
     width: 6rem;
     aspect-ratio: 1 / 1;
     height: auto;
+}
+
+.hero_quote {
+    grid-column: 2 / span 11;
+    grid-row: 2;
+    color: #FEFEFE;
+    text-align: left;
+    margin-bottom: 4rem;
+}
+
+.hero_quote h4 {
+    font-size: 1.4rem;
 }
 
 /* SECTIONS LAYOUT */
