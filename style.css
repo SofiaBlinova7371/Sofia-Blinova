@@ -493,79 +493,49 @@ h2 {
 /* MOBILE ADAPTATION */
 
 @media only screen and (max-width: 800px) {
-
-#custom-cursor {
+  #custom-cursor {
     display: none;
-}
+  }
 
-/* FILTERS */
-
-.desktop-filter {
-    display: none;
-}
-
-#filterDropdown {
-    display: block;
-    font-family: PPNeueMontreal-Medium;
-    color: #fefefe;
-    font-size: 1.4rem;
-    padding: 0.5rem;
-    background-color: #0000;
-    border: 1px solid, #fefefe;
-    width: 90%;
-}
-
-.mobile-filter {
-    display: block;
-    grid-column: 7 / span 6;
-    grid-row: 1;
-}
-
-
-/* SECTIONS */
-
-.section {
-    margin: 0 2rem;
-    row-gap: 4rem;
-}
-
-.info {
-    margin-top: 8rem;
-    margin-bottom: 4rem;
-}
-
-.info .description {
-    grid-row: 2;
-}
-
-.full, .half, .third, .quarter {
-    grid-column: 1 / span 12; 
-}
-
-.card {
-    grid-column: span 12;
-}
-
-/* HEADER */
-
-.header {
+  /* GRID → FLEX OVERRIDE */
+  .projects {
     display: flex;
-    align-items: center;
-    margin: 3rem 1rem 6rem 1rem;
-    width: calc(100vw - 4rem);
-}
+    flex-direction: column;
+    gap: 3rem;
+    margin: 0 2rem;
+  }
 
-.menu {
+  .card {
+    width: 100%;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    margin: 6rem 2rem;
+    row-gap: 2rem;
+  }
+
+  .intro {
     margin-top: 0;
-    margin-right: 1rem;
-}
+  }
 
-.menu_about {
-    margin-top: 4rem;
-}
+  .intro h1 {
+    white-space: normal;
+    text-wrap: wrap;
+    max-width: 90%;
+  }
+
+  .info {
+    border-top: solid 1px #FEFEFE;
+  }
+
+ /* HERO BLOCK */
 
 .hero_block {
-    grid-column: 2 / span 10;
+    grid-column: 1 / span 12;
+    height: 40vh;
+    width: 100vw;
 }
 
 .circles {
@@ -588,72 +558,109 @@ h2 {
 }
 
 .hero_quote {
-    grid-column: 2 / span 11;
+    grid-column: 1 / span 12;
+    padding-left: 2rem;
     grid-row: 2;
     color: #FEFEFE;
     text-align: left;
-    margin-bottom: 4rem;
 }
 
 .hero_quote h4 {
     font-size: 1.4rem;
 }
 
-/* SECTIONS LAYOUT */
+    .quote, .hero_quote {
+    white-space: normal;
+    word-break: break-word;
+    max-width: 90%;
+  }
 
-.intro {
-    margin-bottom: 6rem;
-}
-
-h1, h2 {
-  grid-column: 1 / span 12; 
-  grid-row: 1;
-  white-space: wrap;
-}
-
-.button {
-  grid-column: 1 / span 12;
-  grid-row: 3;
-}
-
-.quote {
-  grid-column: 1 / span 12;
-  grid-row: 2;
-  white-space: wrap;
-}
-
-.categories {
-  grid-column: 1 / span 6;
-  grid-row: 4;
-}
-
-.scope {
-  grid-column: 6 / span 6;
-  grid-row: 4;
-}
-
-.scope li {
-    white-space: wrap;
-}
-
-.description {
-  grid-column: 1 / span 12;
-  grid-row: 3;
-}
-
-
-/* FOOTER */
-.back {
-    grid-column: 1 / span 4; 
-}
-
-.links {
-    grid-column: 6 / span 7; 
+  /* FILTERS */
+.filter {
     display: flex;
-    gap: 1rem;
-    flex-direction: column;
-    align-items: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
+  .desktop-filter {
+    display: none;
+  }
+
+  #filterDropdown {
+    display: block;
+    font-family: PPNeueMontreal-Medium;
+    color: #fefefe;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+    background-color: #0000;
+    border: 1px solid #fefefe;
+    width: 90%;
+  }
+
+  .mobile-filter {
+    display: block;
+    align-self: flex-end;
+  }
+
+  /* CIRCLES */
+  .circles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 2rem;
+    z-index: 2;
+  }
+
+  .circle {
+    background-color: #FEFEFE;
+    opacity: 0.7;
+    border-radius: 100%;
+    width: 6rem;
+    aspect-ratio: 1 / 1;
+    height: auto;
+  }
+
+  /* HEADER */
+  .header {
+    display: flex;
+    align-items: center;
+    margin: 3rem 1rem 6rem 1rem;
+    width: calc(100vw - 4rem);
+  }
+
+  .menu {
+    margin-top: 0;
+    margin-right: 1rem;
+  }
+
+  .menu_about {
+    margin-top: 4rem;
+  }
+
+  /* QUOTE */
+  .hero_quote h4 {
+    font-size: 1.4rem;
+  }
+
+  /* FOOTER */
+  .back {
+    grid-column: auto;
+  }
+
+  .links {
+    display: none;
+  }
+
+  /* VIDEO AUTO-PLAY FIX */
+  video {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+  }
 }
+
 
