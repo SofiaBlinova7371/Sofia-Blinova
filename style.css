@@ -505,8 +505,9 @@ h2 {
     margin: 0 2rem;
   }
 
-  .card {
+  .projects .card, .card {
     width: 100%;
+    margin: 0;
   }
 
   .section {
