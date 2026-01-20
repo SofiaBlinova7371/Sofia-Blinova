@@ -35,7 +35,7 @@ body {
 
 @font-face {
   font-family: "Arcilla";
-  src: url("Arcilla/Arcilla.ttf") format("ttf");
+  src: url("/Arcilla/Arcilla.ttf") format("ttf");
   font-style: normal;
   font-weight: 400 700; /* IMPORTANT for weight axis */
   font-display: swap;
