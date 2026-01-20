@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="stylesheet" href="style.css">
+    <title>Arcilla</title>
+</head>
+<body>
+    <div id="custom-cursor"></div>
+
+    <div class="header">
+        <a href="index.html" id="back"><h2><strong>Sofia Blinova</strong></h2></a>
+        <div class="menu">
+            <div class="circle_menu"></div>
+            <div class="circle_menu"></div>
+            <div class="circle_menu"></div>
+        </div>
+    </div>
+    <div class="section intro">
+        <h1 id="arcilla_h1">Arcilla</h1>
+
+        <div class="categories">
+            <h3>Category</h3>
+            <ul>
+                <li>Typeface design</li>
+                <li>Editorial</li>
+            </ul>
+        </div>
+
+        <div class="scope">
+            <h3>Scope</h3>
+            <ul>
+                <li>Glyphs</li>
+            </ul>
+        </div>
+
+        <h3></h3>
+
+        <p class="description">
+Arcilla is a display typeface shaped by the quiet discipline of the ceramic studio, balancing sharp knife–like cuts with soft molded curves and grounded serif bases. <br> Created for a ceramic studio identity, it translates the tools, textures, and gestures of the craft into typographic form for headlines, labels, and branding. <br><br> From Spanish arcilla — clay; the earthy, malleable material used in ceramic work.</p>
+    </div>
+
+    <div class="section images">
+        <img class="full" src="Arcilla/Bisque Image.png">
+        <img class="half" src="Arcilla/Glyph Table.png">
+        <img class="half" src="Arcilla/Text Image.png">
+    </div>
+
+    <div class="section info">
+        <h2><strong>weight styles</strong></h2>
+    </div>
+
+    <div class="section images">
+        <img class="half" src="Arcilla/Regular.png">
+        <img class="half" src="Arcilla/Bold.png">
+    </div>
+
+    <div class="section info info--slider">
+    <h2><strong>Ligatures & glyph pairings</strong></h2>
+
+    <div class="info-slider">
+        <input
+        id="ligaturesWeight"
+        class="slider"
+        type="range"
+        min="400"
+        max="700"
+        value="400"
+        step="1"
+        />
+        <span id="ligaturesWeightValue" class="slider-value">400</span>
+    </div>
+    </div>
+
+    <div class="section" id="ligaturesSample">
+        <p class="arcilla-sample">AE AVWW HK OC MD<br>ff ft fl fh fi fj tt ti tj<br>Ge. {Pi} Ag*</p>
+    </div>
+
+    <div class="section info info--slider">
+  <h2><strong>Text samples</strong></h2>
+
+  <div class="info-slider">
+    <input
+      id="textSamplesWeight"
+      class="slider"
+        type="range"
+        min="400"
+        max="700"
+        value="400"
+        step="1"
+      aria-label="Arcilla weight (text samples)"
+      data-css-var="--arcilla-wght-text"
+      data-value-output="textSamplesWeightValue"
+    />
+    <span id="textSamplesWeightValue" class="slider-value">400</span>
+  </div>
+
+  <div class="section text-samples-section">
+  <p class="text-sample text-sample--xl">
+Press the clay firmly against the table, using your whole body to build a steady rhythm.
+  </p>
+
+  <p class="text-sample text-sample--md">
+Wedging helps to remove air pockets and align the particles within the clay. Push the clay forward with your palms, fold it back toward you, and repeat the motion continuously. Keep your pressure even and rotate the mass as you work. The goal is to create a cohesive, uniform texture that responds smoothly when shaped.
+  </p>
+
+  <p class="text-sample text-sample--sm">
+As the clay begins to feel consistent, adjust your pace and refine the movement to maintain control. Check the material for trapped air and correct any irregularities by tightening your folds. When the mass becomes stable and elastic, shape it into a compact form suitable for the wheel or for hand-building. Proper wedging ensures strength, prevents cracking, and prepares the clay for every shaping technique that follows.
+  </p>
+</div>
+
+    <script src="cursor.js"></script>
+    <script src="about.js"></script>
+    <script src="footer.js"></script>
+    <script src="slide-in.js"></script>
+    <script src="arcilla-controls.js"></script>
+</body>
+</html>

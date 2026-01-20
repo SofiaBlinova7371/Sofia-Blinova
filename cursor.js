@@ -11,7 +11,7 @@ function applyCustomCursor() {
 
     // Bind enlargement on interactive elements
     const enlargeTriggers = document.querySelectorAll(
-        "a, button, .menu, .card, .cursor-enlarge, .hero_block, .scroll-to-filter, .back, img, video"
+        "a, button, .menu, .card, .cursor-enlarge, .hero_block, .scroll-to-filter, .back, img, video, .slider"
     );
 
     enlargeTriggers.forEach(el => {
