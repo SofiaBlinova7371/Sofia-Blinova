@@ -131,7 +131,7 @@ ul {
   grid-template-rows: auto auto;
   row-gap: 4rem;
   column-gap: 2rem;
-  margin: 0 3rem;
+  margin: 3rem;
 }
 
 /* PROJECTS */
@@ -154,17 +154,18 @@ ul {
 }
 
 .project_img {
-    width: 100%;
-    height: fit-content;
-    object-fit: contain;
-    overflow: hidden;     
+  width: 100%;
+  aspect-ratio: 4 / 3; /* adjust if you want tighter/taller */
+  overflow: hidden;
+  position: relative;
+  object-fit: contain;
 }
 
 .card_img {
-    width: 100%;
-    height: fit-content;
-    object-fit: contain;
-    transition: 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* important: fills container */
+  transition: 0.3s ease;
 }
 
 .project_name {
@@ -185,7 +186,7 @@ ul {
 }
 
 .card:hover .card_img {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 /* FILTER */
@@ -201,10 +202,9 @@ ul {
 
 
 .filter {
-    margin-top: 6rem;
-    margin-bottom: 8rem;
+    margin-top: 3rem;
     border-top: solid 1px #FEFEFE;
-    padding-top: 2rem;
+    padding-top: 3rem;
 }
 
 .filter_options {
@@ -227,7 +227,8 @@ ul {
 
 .header {
     display: flex;
-    margin: 3rem 3rem 6rem 3rem;
+    margin: 3rem;
+    margin-bottom: 3rem;
     justify-content: space-between;
     width: 94vw;
 }
@@ -246,7 +247,6 @@ ul {
     align-items: center;
     gap: 1rem;
     grid-column: 1;
-    margin-top: 2rem;
 }
 
 .circle_menu {
@@ -289,18 +289,8 @@ ul {
 
 /* INTRO */
 
-.intro {
-    margin-bottom: 6rem;
-}
-
 h1 {
   grid-column: 1 / span 4;
-  grid-row: 1;
-  white-space: nowrap;
-}
-
-.quote {
-  grid-column: 5 / span 8;
   grid-row: 1;
   white-space: nowrap;
 }
@@ -326,8 +316,8 @@ h1 {
 /* INFO */
 
 .info {
-    margin-top: 16rem;
-    margin-bottom: 8rem;
+    margin-top: 12rem;
+    margin-bottom: 6rem;
     border-top: solid 1px #FEFEFE;
     padding-top: 2rem;
     grid-template-rows: auto;
@@ -495,13 +485,6 @@ Sizes
 
 .motion {
   max-height: 85vh;
-}
-
-.resume {
-    grid-column: 3 / span 8;
-    width: 100%;   
-    object-fit: contain;
-    height: auto;
 }
 
 
